@@ -558,6 +558,10 @@ a.chart_item:hover {
 	font-weight: 600;
 	display: inline-block;
     margin: 0 7px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.chart_item__table td > a:hover {
+	color: #93a53b;
 }
 .chart_item__table th {
 	color: #999999;
