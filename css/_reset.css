@@ -70,6 +70,9 @@ ul {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
 }
+ul, ol {
+  margin-bottom: 0;
+}
 p, h1, h2, h3, h4, h5, h6 {
     display: block;
     -webkit-margin-before: 0em;
