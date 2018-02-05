@@ -41,12 +41,14 @@ input, select, textarea, button {
 	display: -ms-flex;
 	display: flex;
 	justify-content: flex-end;
+	height: 100%;
 }
 .header_top_bar {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	padding: 0 15px;
+	height: 100%;
 }
 .orders_top_dropdown {
 	cursor: pointer;
@@ -78,14 +80,24 @@ input, select, textarea, button {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
+	position: relative;
 }
 .style_list_notifications > ul > li:not(:last-child) {
 	border-bottom: 1px solid #E6E8E8;
 }
 .style_list_notifications > ul > li > p > a {	
 	color: #23B7E5;
+	display: inline-block;
+    padding: 0 4px;
 }
-.style_list_notifications > ul > li > p > span {
+.style_list_notifications > ul > li > p > span:not(.addition_date) {
+	position: relative;
+	z-index: 2;
+}
+.style_list_notifications > ul > li > p > span:not(.addition_date) > a {
+	color: #23B7E5;
+}
+.style_list_notifications > ul > li > p .addition_date {
 	color: #99A6AD;
 	font-size: 12px;
 	display: inline-block;
@@ -93,10 +105,12 @@ input, select, textarea, button {
     margin: 5px 0 0 0;
 }
 .style_list_notifications > ul > li > a {
-	padding: 0;
-}
-.see_all_notifications {
-	position: relative;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
 }
 .see_all_notifications:after {
 	content: "\f0f3";
@@ -107,7 +121,7 @@ input, select, textarea, button {
     right: 15px;
     top: 11px;
 }
-.orders_top_dropdown:hover {
+.orders_top_dropdown:hover, .orders_top_dropdown.open {
 	background: #625893;
 }
 .order_picture {
@@ -144,7 +158,7 @@ input, select, textarea, button {
     align-items: center;
     padding: 0 15px;
 }
-.user_top_dropdown:hover {
+.user_top_dropdown:hover, .user_top_dropdown.open {
 	background: #625893;
 }
 .user_top_dropdown .user_name {
@@ -209,6 +223,16 @@ input, select, textarea, button {
     margin: 0;
     padding: 0;
 }
+.style_dropdown > li {
+	transition: all 0.3s ease-in-out 0s;
+}
+.style_dropdown > li:hover {
+	background-color: #F4F4F4;
+}
+.style_dropdown > li > a:hover {
+	background-color: transparent;
+	background-image: none;
+}
 .user_top_dropdown > ul > li > a {
 	padding: 8px 20px;
 }
@@ -226,6 +250,11 @@ input, select, textarea, button {
 }
 .header_bottom_bar_wrapper {
 	padding: 18px 15px;
+}
+.header_bottom_bar_wrapper > div {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
 }
 .header_menu_wrapper {
 	display: -webkit-flex;
@@ -253,7 +282,7 @@ input, select, textarea, button {
 	transition: all 0.3s ease-in-out 0s;
 }
 .header_menu_wrapper > ul > li:not(:first-child) > a:hover {
-	background-color: #9588e0;
+	background-color: #6254B2;
 }
 .header_menu_wrapper > ul > li:first-child a {
 	background-color: transparent;
@@ -266,6 +295,11 @@ input, select, textarea, button {
 .header_menu_wrapper > ul > li:first-child a:hover {
 	background-color: #EDF1F2;
 }
+.header_logo__wrapper {
+	display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
 .header_logo {
 	color: #464646;
 	font-size: 21px;
@@ -276,7 +310,7 @@ input, select, textarea, button {
     align-items: center;
 }
 .header_logo > img {
-    margin: -4px 10px 0 0;
+    margin: 0 10px 0 0;
 }
 .header_menu_wrapper > ul > li:first-child a:before {
 	content: url("../img/house.png");
@@ -346,7 +380,7 @@ input, select, textarea, button {
     transition: all 0.3s ease-in-out 0s;
 }
 .show_days_caret:hover {
-	background-color: #2dcdff;
+	background-color: #19A9D5;
 }
 .show_days_caret > span {
 	color: #fff;
@@ -376,6 +410,13 @@ input, select, textarea, button {
     flex-direction: column;
     margin: 10px 0;
     position: relative;
+}
+a.chart_item {
+	transition: all 0.3s ease-in-out 0s;
+}
+a.chart_item:hover {
+	-webkit-box-shadow: 0px 2px 13px 4px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 13px 4px rgba(0,0,0,0.25);
 }
 .chart_item__narrow {
 	width: 48%;
@@ -482,6 +523,9 @@ input, select, textarea, button {
 .chart_item__content {
 	padding: 20px 5px 18px 5px;
 	width: 100%;
+}
+.chart_item__content > div > img {
+    height: 206px; //delete in finish 
 }
 .style_appareal {
 	background-color: #F4F4F4;
