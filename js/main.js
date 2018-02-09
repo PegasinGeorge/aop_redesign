@@ -72,10 +72,11 @@ function styleProductsList() {
 
 /*Disable product*/
 function disableProductItem() {
-	if ($('.js-productCheckbox').prop('checked') == true) {
-			$('.js-productCheckbox').parents('.product_item').removeClass('-style_disabled_product');
+    var checkBox = $('.js-productCheckbox');
+    if (checkBox.prop('checked')){
+	    checkBox.parents('.product_item').removeClass('-style_disabled_product');
 	} else {
-		$('.js-productCheckbox').parents('.product_item').addClass('-style_disabled_product');
+	    checkBox.parents('.product_item').addClass('-style_disabled_product');
 	};
 
 	$('body').on('click', '.js-productCheckbox', function(e) {
