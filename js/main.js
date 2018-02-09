@@ -72,11 +72,12 @@ function styleProductsList() {
 
 /*Disable product*/
 function disableProductItem() {
-    var checkBox = $('.js-productCheckbox');
-    if (checkBox.prop('checked')){
-	    checkBox.parents('.product_item').removeClass('-style_disabled_product');
+    var checkbox = $('input.js-productCheckbox:checkbox:not(:checked)');
+
+  	if (checkbox.prop('checked')){
+    	checkbox.parents('.product_item').removeClass('-style_disabled_product');
 	} else {
-	    checkBox.parents('.product_item').addClass('-style_disabled_product');
+	    checkbox.parents('.product_item').addClass('-style_disabled_product');
 	};
 
 	$('body').on('click', '.js-productCheckbox', function(e) {
