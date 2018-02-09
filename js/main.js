@@ -72,11 +72,12 @@ function styleProductsList() {
 
 /*Disable product*/
 function disableProductItem() {
-    var checkBox = $('.js-productCheckbox');
-    if (checkBox.prop('checked')){
-	    checkBox.parents('.product_item').removeClass('-style_disabled_product');
+  var checkbox = $('input.js-productCheckbox:checkbox:not(:checked)');
+
+  if (checkbox.prop('checked')){
+    checkbox.parents('.product_item').removeClass('-style_disabled_product');
 	} else {
-	    checkBox.parents('.product_item').addClass('-style_disabled_product');
+	    checkbox.parents('.product_item').addClass('-style_disabled_product');
 	};
 
 	$('body').on('click', '.js-productCheckbox', function(e) {
@@ -100,7 +101,7 @@ function activationModal() {
     	width: 640,
     	height: 250,
     });
-    $('body').on('click', '.my_collection', function(e) {	
+    $('body').on('click', '.my_collection', function(e) {
     	e.preventDefault();
 	  $( "#collection_modal" ).dialog( "open" );
 	});
@@ -116,7 +117,7 @@ function activationModal() {
     	width: 640,
     	height: 135,
     });
-    $('body').on('click', '.remove_collection', function(e) { 	
+    $('body').on('click', '.remove_collection', function(e) {
     	e.preventDefault();
 	  $( "#confirmation_modal" ).dialog( "open" );
 	});
