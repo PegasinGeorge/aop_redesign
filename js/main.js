@@ -72,14 +72,13 @@ function styleProductsList() {
 
 /*Disable product*/
 function disableProductItem() {
-  var checkbox = $('input.js-productCheckbox:checkbox:not(:checked)');
-
-  if (checkbox.prop('checked')){
-    checkbox.parents('.product_item').removeClass('-style_disabled_product');
+    var checkbox = $('input.js-productCheckbox:checkbox:not(:checked)');
+    
+  	if (checkbox.prop('checked')){
+    	checkbox.parents('.product_item').removeClass('-style_disabled_product');
 	} else {
 	    checkbox.parents('.product_item').addClass('-style_disabled_product');
 	};
-
 	$('body').on('click', '.js-productCheckbox', function(e) {
 		if ($(e.target).prop('checked') == true) {
 			$(e.target).parents('.product_item').removeClass('-style_disabled_product');
@@ -92,38 +91,42 @@ function disableProductItem() {
 
 /*Modal generation*/
 function activationModal() {
-    $( "#collection_modal" ).dialog({
-    	autoOpen: false,
-    	maxWidth: 640,
-    	modal: true,
-    	draggable: false,
-    	resizable: false,
-    	width: 640,
-    	height: 250,
-    });
-    $('body').on('click', '.my_collection', function(e) {
-    	e.preventDefault();
-	  $( "#collection_modal" ).dialog( "open" );
-	});
-	$('.ui-dialog').addClass('collection_modal');
-	$('.ui-dialog-titlebar-close').html('');
+	if ($("#collection_modal").length) {
+			$( "#collection_modal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 640,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 640,
+	    	height: 250,
+	    });
+	    $('body').on('click', '.my_collection', function(e) {	
+	    	e.preventDefault();
+		  $( "#collection_modal" ).dialog( "open" );
+		});
+		$('.ui-dialog').addClass('collection_modal');
+		$('.ui-dialog-titlebar-close').html('');
+	};
 
-	$( "#confirmation_modal" ).dialog({
-    	autoOpen: false,
-    	maxWidth: 640,
-    	modal: true,
-    	draggable: false,
-    	resizable: false,
-    	width: 640,
-    	height: 135,
-    });
-    $('body').on('click', '.remove_collection', function(e) {
-    	e.preventDefault();
-	  $( "#confirmation_modal" ).dialog( "open" );
-	});
-	$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
-		$('#confirmation_modal').dialog( "close" );
-	});
-	$('.ui-dialog').eq(1).addClass('confirmation_modal');
+	if ($("#collection_modal").length) {
+		$( "#confirmation_modal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 640,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 640,
+	    	height: 135,
+	    });
+	    $('body').on('click', '.remove_collection', function(e) { 	
+	    	e.preventDefault();
+		  $( "#confirmation_modal" ).dialog( "open" );
+		});
+		$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
+			$('#confirmation_modal').dialog( "close" );
+		});
+		$('.ui-dialog').eq(1).addClass('confirmation_modal');
+	};
 };
 /*END Modal generation*/
