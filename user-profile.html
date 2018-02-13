@@ -106,12 +106,109 @@
                 </div>
               </div>
             </div>
+            <div class="profile_item">
+              <div class="profile_item__heading">
+                <div class="profile_item__heading_info">
+                  <p>Social media</p>
+                  <span>We would like to know who you are</span>
+                </div>
+              </div>
+              <div class="profile_item__content">
+                <div class="row">
+                  <div class="col-xs-12 profile_item__content_field style-social_field a2a_kit">
+                    <a class="a2a_button_facebook"><span class="style_fb"><i class="fa fa-facebook" aria-hidden="true"></i></span>Connect your Facebook account</a><div class="checkbox_wrapper"><input type="checkbox" checked="checked" name="social_checkbox" id="social_facebook" class="standart_checkbox social_checkbox js-socialCheckbox"/>
+                          <label for="social_facebook"><i></i></label></div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 profile_item__content_field style-social_field a2a_kit">
+                    <a class="a2a_button_twitter"><span class="style_tw"><i class="fa fa-twitter" aria-hidden="true"></i></span>Connect with Twitter</a><div class="checkbox_wrapper"><input type="checkbox" checked="checked" name="social_checkbox" id="social_twitter" class="standart_checkbox social_checkbox js-socialCheckbox"/>
+                          <label for="social_twitter"><i></i></label></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-12 col-sm-6">
             <div class="profile_item">
               <div class="profile_item__heading">
                 <div class="profile_item__heading_info">
                   <p>General settings</p>
+                </div>
+              </div>
+              <div class="profile_item__content">
+                <div class="row">
+                  <div class="col-xs-12 profile_item__content_field">
+                    <span>Company / Store Name</span>
+                    <input type="text" placeholder="Oduvan Design Store">
+                    <div class="square_checkbox_wrapper">
+                      <input type="checkbox" checked="checked" name="name_checkbox" id="name_checkbox" class="social_checkbox js-socialCheckbox"/>
+                      <label for="name_checkbox"><i></i></label>
+                      <span>Display this name on my profile</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 profile_item__content_field">
+                    <span>VAT number</span>
+                    <input type="text" placeholder="123 547 988">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 profile_item__content_field">
+                    <span>Adress 1</span>
+                    <input type="text" placeholder="C/Valencia, 1">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 profile_item__content_field">
+                    <span>Adress 2</span>
+                    <input type="text" placeholder="C/ Plaza mayor, 27">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 profile_item__content_field">
+                    <span>Country</span>
+                    <div class="btn-group profile_page_dropdown_wrapper">
+                      <a class="dropdown-toggle profile_page_dropdown js-selectedLocation js-selectedCountry" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </a>
+                      <ul class="dropdown-menu style_dropdown_country js-choiceLocation js-firstCountry">
+                        <li><a href="#">Great Britain</a></li>
+                        <li><a href="#">Spain</a></li>
+                        <li><a href="#">Italy</a></li>
+                        <li><a href="#">United States</a></li>
+                        <li><a href="#">Germany</a></li>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 profile_item__content_field">
+                    <span>City</span>
+                    <div class="btn-group profile_page_dropdown_wrapper">
+                      <a class="dropdown-toggle profile_page_dropdown js-selectedLocation js-selectedCity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </a>
+                      <ul class="dropdown-menu style_dropdown_country js-choiceLocation js-firstCity">
+                        <li><a href="#">Segovia</a></li>
+                        <li><a href="#">City 2</a></li>
+                        <li><a href="#">City 3</a></li>
+                        <li><a href="#">City 4</a></li>
+                        <li><a href="#">City 5</a></li>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 profile_item__content_field">
+                    <span>Postal / ZIP Code</span>
+                    <input type="text" placeholder="40005">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 profile_item__buttons">
+                    <input type="submit" value="CANCEL">
+                    <input type="submit" value="SAVE CHANGES" class="-is-active">
+                  </div>
                 </div>
               </div>
             </div>
@@ -123,7 +220,9 @@
   </div>
 
   <script src="dist/jquery.min.js"></script>
+  <script src="jquery-ui/jquery-ui.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

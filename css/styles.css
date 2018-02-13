@@ -56,7 +56,7 @@ input, select, textarea, button {
 .orders_top_dropdown {
 	cursor: pointer;
 	position: relative;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 }
 .orders_top_dropdown .dropdown-toggle {
 	padding: 17px 20px 11px 14px;
@@ -159,7 +159,7 @@ input, select, textarea, button {
 }
 .user_top_dropdown {
 	cursor: pointer;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
@@ -234,7 +234,7 @@ input, select, textarea, button {
     padding: 0;
 }
 .style_dropdown > li {
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 }
 .style_dropdown > li:hover {
 	background-color: #F4F4F4;
@@ -289,7 +289,7 @@ input, select, textarea, button {
 	display: inline-block;
 	padding: 8px 16px;
 	border-radius: 3px;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 	position: relative;
 }
 .header_menu_wrapper > ul > li > a:not(.active_page):hover {
@@ -390,7 +390,7 @@ input, select, textarea, button {
     color: #fff;
     background-color: #23B7E5;
     outline: none;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
     padding: 5px;
     text-align: center;
     height: 35px;
@@ -432,7 +432,7 @@ input, select, textarea, button {
     position: relative;
 }
 a.chart_item {
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 }
 a.chart_item:hover {
 	-webkit-box-shadow: 0px 2px 13px 4px rgba(0,0,0,0.25);
@@ -526,7 +526,7 @@ a.chart_item:hover {
 	border: 1px solid #F3F2EE;
 	padding: 7px 14px;
 	display: inline-block;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 }
 .chart_item__heading_buttons ul li a:hover, .chart_item__heading_buttons ul li.active a {
 	background-color: #EDF1F2;
@@ -578,7 +578,7 @@ a.chart_item:hover {
 	font-weight: 600;
 	display: inline-block;
     margin: 0 7px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
 }
 .chart_item__table td > a:hover {
 	color: #9baf3b;
@@ -632,7 +632,7 @@ a.chart_item:hover {
     text-align: center;
     line-height: 2.3;
     border-radius: 4px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
 }
 .ready_publish_products a:hover {
 	background-color: #9baf3b;
@@ -684,18 +684,16 @@ a.chart_item:hover {
     background-color: #fff;
     border-style: solid;
     border-top: none;
-    margin: 0 0 0 -20px;
+    transition: height 0.3s ease-in-out, opacity .3s ease-in-out;
 }
 .sub_menu.-style_open_sub_menu {
-	height: auto;
-	opacity: 1;
-	margin: 0;
-	transition: margin 0.3s ease-in-out 0s;
+	max-height: 999vh;
+	opacity: 1;	
 }
 .sub_menu > li > a {
 	color: #464646;
 	width: 100%;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 	display: inline-block;
 }
 .sub_menu > li > a > span {
@@ -732,7 +730,7 @@ a.chart_item:hover {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 }
 .naw_menu_filters > a:hover {
 	color: #19A9D5;
@@ -749,7 +747,7 @@ a.chart_item:hover {
 	font-size: 25px;
     font-weight: 400;
     margin: 0 0 0 8px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
 }
 .naw_menu_filters > a > span:hover {
 	background-color: #19A9D5;
@@ -860,7 +858,7 @@ a.chart_item:hover {
 	right: 0;
 }
 .style_dropdown_style_product > li {
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 }
 .style_dropdown_style_product > li:hover {
 	background-color: #E4F6FC;
@@ -915,7 +913,7 @@ a.chart_item:hover {
     border-radius: 40px; 
     background-color: #23B7E5;
     box-shadow: none;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
 }
 .checkbox_wrapper input + label i:before {
 	position: absolute;
@@ -989,7 +987,7 @@ a.chart_item:hover {
 	justify-content: center;
 	align-items: center;
 	background-color: #fff;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 }
 .change_style_list_buttons ul li a:hover, .change_style_list_buttons ul li a.-is-active {
 	background-color: #23B7E5;
@@ -1026,7 +1024,7 @@ a.chart_item:hover {
     height: 20px;
     font-size: 23px;
     font-weight: 400;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
     margin: 0 0 0 8px;
 }
 .show_cetegories > p > a:hover {
@@ -1126,8 +1124,9 @@ a.chart_item:hover {
     padding: 7px;
     left: 1%;
     top: 194%;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
+    pointer-events: none;
 }
 .product_item_info_top {
 	display: flex;
@@ -1168,7 +1167,7 @@ a.chart_item:hover {
 	width: 100%;
 	border-radius: 4px;
 	background-color: #23B7E5;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 	text-align: center;
 	padding: 8px 0;
 }
@@ -1206,7 +1205,7 @@ a.chart_item:hover {
 	border-radius: 3px;
 	opacity: 1;
 	background: #23B7E5;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out;
 	color: #fff;
 	display: flex;
 	justify-content: center;
@@ -1303,7 +1302,7 @@ a.chart_item:hover {
 	width: 80px;
     height: 30px;
     margin: 0 5px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
 }
 .ui-widget.confirmation_modal .ui-dialog-content input[type="submit"]:hover {
 	background-color: #23B7E5;
@@ -1356,6 +1355,7 @@ a.chart_item:hover {
 	height: 208px;
 	width: 38.5%;
 	position: relative;
+	background-size: cover;
 }
 .profile_photo .profile_photo_add_image {
 	position: absolute;
@@ -1466,4 +1466,187 @@ a.profile_photo_remove span {
 .profile_item__content_field > input {
 	border: 2px solid #EEEEEE;
 	padding: 8px 10px;
+}
+.profile_item__content_field > input:focus {
+	border: 2px solid #91DBF2;
+}
+.style-social_field {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 15px 0 15px;
+}
+.style-social_field > a {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+.style-social_field > a {
+	font-size: 16px;
+	color: #58666E;
+}
+.style-social_field > a > span {
+	border-radius: 50%;
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	color: #fff;
+	text-align: center;
+    font-size: 22px;
+    line-height: 1.8;
+    margin: 0 12px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+.style-social_field .checkbox_wrapper {
+    margin: 10px 0 0 0px;
+}
+.style_fb {
+	background-color: #3B5998;
+	border: 1px solid #3B5998;
+}
+.style_fb:hover {
+	background-color: #29488a;
+	border: 1px solid #29488a;
+}
+.style_tw {
+	background-color: #23B7E5;
+	border: 1px solid #23B7E5;
+}
+.style_tw:hover {
+	background-color: #19A9D5;
+	border: 1px solid #19A9D5;
+}
+.style-social_field.-is-disbled_social_field > a {
+	pointer-events: none;
+}
+.style-social_field.-is-disbled_social_field > a > span {
+	background-color: #fff;
+	border: 1px solid #999999;
+	color: #999999;
+}
+.square_checkbox_wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	padding: 10px 0 13px 0;
+	border-bottom: 1px dashed #EEEEEE;
+}
+.square_checkbox_wrapper input[type="checkbox"] {
+	display: none;
+}
+.square_checkbox_wrapper label {
+	display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #A5ACB1;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+.square_checkbox_wrapper input + label:before {
+	content: "\f00c";
+	font-family: "FontAwesome";
+	position: absolute;
+	color: #fff;
+    transition: all 0.3s ease-in-out;
+    top: -3px;
+    left: 1px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.square_checkbox_wrapper input[type=checkbox]:checked + label{
+    background-color: #23B7E5;
+    border: 2px solid #23B7E5;
+}
+.square_checkbox_wrapper span {
+	color: #99A6AD;
+	margin: 0 20px;
+}
+.profile_page_dropdown {
+	width: 100%;
+	cursor: pointer;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid #EEEEEE;
+    padding: 6px 10px;
+    color: #58666E;
+    position: relative;
+}
+.profile_page_dropdown:after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid #999999;
+    right: 10px;
+    top: 15px;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.style_dropdown_country {
+	border-radius: 3px;
+    border: 1px solid #E6E8E8;
+    left: 0;
+    right: 0;
+}
+.style_dropdown_country > li {
+	transition: all 0.3s ease-in-out;
+}
+.style_dropdown_country > li:hover {
+	background-color: #E4F6FC;
+}
+.style_dropdown_country > li > a {
+	padding: 8px 20px;
+}
+.style_dropdown_country > li > a:hover {
+	background-color: transparent;
+    background-image: none;
+}
+.profile_page_dropdown_wrapper.open .dropdown-toggle {
+	box-shadow: none;
+	border: 2px solid #91DBF2;
+}
+.profile_page_dropdown_wrapper.open .profile_page_dropdown:after {
+	border-top: 4px solid #91DBF2;
+}
+.profile_item__buttons {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px 15px 0 15px;
+}
+.profile_item__buttons input {
+	background-color: #fff;
+	border: 1px solid #EEEEEE;
+	border-radius: 3px;
+	color: #999999;
+	font-weight: 400;
+	padding: 7px 10px;
+	margin: 0 0 0 10px;
+	transition: all 0.3s ease-in-out;
+}
+.profile_item__buttons input:hover, .profile_item__buttons input.-is-active {
+	background-color: #23B7E5;
+	color: #fff;
 }
