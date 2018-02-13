@@ -65,8 +65,8 @@ input, select, textarea, button {
 .orders_top_dropdown .dropdown-toggle > .top_bell {
 	display: inline-block;
 	float: left;
-	width: 18px; 
-	height: 21px; 
+	width: 18px;
+	height: 21px;
 	background-position: -21px 0;
 }
 .style_list_notifications {
@@ -692,7 +692,7 @@ a.chart_item:hover {
     transition: height 0.3s ease-in-out;
 }
 .sub_menu.-style_open_sub_menu {
-	max-height: 999vh;	
+	max-height: 999vh;
     border-bottom: 2px solid #EBE9E3;
 }
 .sub_menu > li > a {
@@ -1714,6 +1714,42 @@ a.button__save:hover{
 	width: 25%;
 }
 
-.pageBlock{}
+.itemTitle{
+	color: #58666E;
+	font-size: 24px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+.row.-style_wider{
+	display: flex;
+	margin: 0 -10px;
+}
+
+.pageBlock{
+	background-color: #fff;
+	margin: 10px;
+}
+
+.pageBlock__header {
+    display: flex;
+    justify-content: space-between;
+		padding: 15px 0;
+}
+
+.hint{
+	background-image: url('../img/info.png');
+	display: block;
+	width: 27px;
+	height: 27px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	margin: 0 0 0 30px;
+}
+
+.hint:hover > .hintInfo{
+	color: red;
+}
 
  /* / Edit Product Page */
