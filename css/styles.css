@@ -59,11 +59,12 @@ input, select, textarea, button {
 	transition: all 0.3s ease-in-out;
 }
 .orders_top_dropdown .dropdown-toggle {
-	padding: 17px 20px 11px 14px;
+	padding: 18px 14px 37px 14px;
 	display: block;
 }
 .orders_top_dropdown .dropdown-toggle > .top_bell {
 	display: inline-block;
+	float: left;
 	width: 18px; 
 	height: 21px; 
 	background-position: -21px 0;
@@ -143,14 +144,13 @@ input, select, textarea, button {
 	margin: 0 15px 0 0;
 }
 .orders_top_dropdown .value {
-	position: absolute;
 	color: #fff;
 	display: inline-block;
+	float: left;
 	background-color: #F05050;
 	border-radius: 10px;
 	padding: 0px 7px;
-	right: 10px;
-    top: 9px;
+	margin: -6px 0px 0px -9px;
 	font-size: 12px;
 	font-weight: 600;
 }
@@ -337,6 +337,7 @@ input, select, textarea, button {
 .main {
 	background-color: #F0F3F4;
 	padding: 0 0 50px 0;
+	min-height: 100vh;
 }
 .dashboard_name > p {
 	color: #464646;
@@ -607,6 +608,7 @@ a.chart_item:hover {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
+	flex-wrap: wrap;
 }
 .ready_publish_products {
 	display: -webkit-flex;
@@ -630,7 +632,7 @@ a.chart_item:hover {
 	min-height: 36px;
     width: 188px;
     text-align: center;
-    line-height: 2.3;
+    line-height: 2.6;
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
@@ -677,18 +679,18 @@ a.chart_item:hover {
 }
 .sub_menu {
 	height: 0;
-	opacity: 0;
 	overflow: hidden;
 	border-color: #EBE9E3;
     border-width: 2px;
     background-color: #fff;
     border-style: solid;
     border-top: none;
-    transition: height 0.3s ease-in-out, opacity .3s ease-in-out;
+    border-bottom: none;
+    transition: height 0.3s ease-in-out;
 }
 .sub_menu.-style_open_sub_menu {
-	max-height: 999vh;
-	opacity: 1;	
+	max-height: 999vh;	
+    border-bottom: 2px solid #EBE9E3;
 }
 .sub_menu > li > a {
 	color: #464646;
@@ -737,20 +739,25 @@ a.chart_item:hover {
 }
 .naw_menu_filters > a > span {
 	border-radius: 50%;
-	background-color: #23B7E5;
-	color: #fff;
-	padding: 3px;
-	line-height: 0.5;
+	background-color: #fff;
+	padding: 0px;
+	line-height: 0;
 	text-align: center;
-	width: 20px;
-	height: 20px;
-	font-size: 25px;
+	width: 18px;
+	height: 18px;
+	font-size: 23px;
     font-weight: 400;
     margin: 0 0 0 8px;
-    transition: all 0.3s ease-in-out;
 }
-.naw_menu_filters > a > span:hover {
-	background-color: #19A9D5;
+.naw_menu_filters > a > span > i {
+	display: inline-block;
+	margin: -1px 1px 0 0;
+	transition: all 0.3s ease-in-out;
+	color: #23B7E5;
+	transform: rotate(45deg);
+}
+.naw_menu_filters > a > span:hover > i {
+	color: #19A9D5;
 }
 .product_item {
 	-webkit-box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
@@ -965,12 +972,11 @@ a.chart_item:hover {
     color: #99A6AD;
     height: 35px;
     padding: 0 15px;
-    font-style: italic; 
 }
-.style_search::-webkit-input-placeholder {color:#99A6AD;}
-.style_search::-moz-placeholder          {color:#99A6AD;}/* Firefox 19+ */
-.style_search:-moz-placeholder           {color:#99A6AD;}/* Firefox 18- */
-.style_search:-ms-input-placeholder      {color:#99A6AD;}
+.style_search input::-webkit-input-placeholder {color:#99A6AD;}
+.style_search input::-moz-placeholder          {color:#99A6AD;}/* Firefox 19+ */
+.style_search input:-moz-placeholder           {color:#99A6AD;}/* Firefox 18- */
+.style_search input:-ms-input-placeholder      {color:#99A6AD;}
 
 .change_style_list_buttons ul {
 	display: flex;
@@ -1009,26 +1015,31 @@ a.chart_item:hover {
 	border-radius: 50px;
 	background-color: #E2E5E6;
 	color: #464646;
-	padding: 6px 5px 6px 12px;
+	padding: 6px 7px 6px 12px;
 	display: flex;
 	margin: 0 8px 0 0;
 }
 .show_cetegories > p > a {
 	border-radius: 50%;
-    background-color: #68696A;
+	background-color: #fff;
     color: #fff;
-    padding: 3px;
-    line-height: 0.5;
+    padding: 0;
+    line-height: 0;
     text-align: center;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     font-size: 23px;
-    font-weight: 400;
-    transition: all 0.3s ease-in-out;
     margin: 0 0 0 8px;
 }
-.show_cetegories > p > a:hover {
-	background-color: #535454;
+.show_cetegories > p > a > i {
+	transform: rotate(45deg);
+	transition: all 0.3s ease-in-out;
+	margin: -2px 1px 0 0;
+	color: #68696A;
+}
+.show_cetegories > p > a:hover > i {
+	color: #535454;
+	display: inline-block;
 }
 .products_items_wrapper {
 	width: 100%;
