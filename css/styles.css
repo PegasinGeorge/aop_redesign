@@ -64,8 +64,8 @@ input, select, textarea, button {
 }
 .orders_top_dropdown .dropdown-toggle > .top_bell {
 	display: inline-block;
-	width: 18px; 
-	height: 21px; 
+	width: 18px;
+	height: 21px;
 	background-position: -21px 0;
 }
 .style_list_notifications {
@@ -90,7 +90,7 @@ input, select, textarea, button {
 .style_list_notifications > ul > li:not(:last-child) {
 	border-bottom: 1px solid #E6E8E8;
 }
-.style_list_notifications > ul > li > p > a {	
+.style_list_notifications > ul > li > p > a {
 	color: #23B7E5;
 	display: inline-block;
     padding: 0 4px;
@@ -223,8 +223,8 @@ input, select, textarea, button {
 }
 .user_top_dropdown .dropdown-menu > li:last-child a > i {
 	display: inline-block;
-	width: 18px; 
-	height: 18px; 
+	width: 18px;
+	height: 18px;
 	background-position: -38px -22px;
 }
 .style_dropdown {
@@ -337,6 +337,7 @@ input, select, textarea, button {
 .main {
 	background-color: #F0F3F4;
 	padding: 0 0 50px 0;
+	min-height: calc(100vh - 60px);
 }
 .dashboard_name > p {
 	color: #464646;
@@ -350,6 +351,9 @@ input, select, textarea, button {
 	display: -ms-flex;
 	display: flex;
 	justify-content: space-between;
+
+	-ms-align-items: center;
+	align-items: center;
 }
 .dashboard_name > span {
 	color: #99A6AD;
@@ -452,7 +456,7 @@ a.chart_item:hover {
 }
 .chart_item__value p > span {
 	font-size: 21px;
-} 
+}
 .style_number_orders {
 	background-color: #fff;
 }
@@ -545,7 +549,7 @@ a.chart_item:hover {
 	width: 100%;
 }
 .chart_item__content > div > img {
-    height: 206px; //delete in finish 
+    height: 206px; //delete in finish
 }
 .style_appareal {
 	background-color: #F4F4F4;
@@ -556,7 +560,7 @@ a.chart_item:hover {
     background-color: transparent;
     margin: 0 0 10px 0;
 }
-.chart_item__table th, .chart_item__table td {  
+.chart_item__table th, .chart_item__table td {
   	padding: 0.25em;
   	border: none !important;
   	line-height: 1.42857143;
@@ -591,8 +595,8 @@ a.chart_item:hover {
 	padding: 0 8px 10px 8px;
 }
 @media screen and (max-width: 800px) {
-  tr { 
-    display: flex; 
+  tr {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0.5em 0;
@@ -688,7 +692,7 @@ a.chart_item:hover {
 }
 .sub_menu.-style_open_sub_menu {
 	max-height: 999vh;
-	opacity: 1;	
+	opacity: 1;
 }
 .sub_menu > li > a {
 	color: #464646;
@@ -910,7 +914,7 @@ a.chart_item:hover {
     position: relative;
     width: 40px;
     height: 22px;
-    border-radius: 40px; 
+    border-radius: 40px;
     background-color: #23B7E5;
     box-shadow: none;
     transition: all 0.3s ease-in-out;
@@ -965,7 +969,7 @@ a.chart_item:hover {
     color: #99A6AD;
     height: 35px;
     padding: 0 15px;
-    font-style: italic; 
+    font-style: italic;
 }
 .style_search::-webkit-input-placeholder {color:#99A6AD;}
 .style_search::-moz-placeholder          {color:#99A6AD;}/* Firefox 19+ */
@@ -1650,3 +1654,56 @@ a.profile_photo_remove span {
 	background-color: #23B7E5;
 	color: #fff;
 }
+
+/* Edit Product Page */
+
+.backButton__wrapper{
+	padding: 15px 0;
+	max-width: 55px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.backButton{
+	display: block;
+	width: 55px;
+	height: 55px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: 25px 25px;
+	background-size: 25px 25px;
+	background-image: url('../img/back.png');
+}
+
+a.button__save{
+	display: block;
+	text-decoration: none;
+	background-color: #B2C746;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	width: 200px;
+	height: 36px;
+	text-align: center;
+	line-height: 34px;
+	border-radius: 6px;
+	margin-right: -40px;
+	transition: all .3s ease-in-out;
+}
+
+a.button__save:hover{
+	background-color: #8c9c37;
+}
+
+.-style_1oo4{
+	width: 25%;
+}
+
+.pageBlock{}
+
+ /* / Edit Product Page */
