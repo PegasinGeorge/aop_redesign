@@ -54,7 +54,8 @@ function openSubMenu() {
 		var finalHeight = 36 * menuHeight;
 		$(e.target).toggleClass('-style_naw_menu_open');
 		$(e.target).next().toggleClass('-style_open_sub_menu');
-		$(e.target).siblings('.-style_open_sub_menu').css("height", finalHeight);
+		$(e.target).siblings('.sub_menu.-style_open_sub_menu').height(finalHeight);
+		$(".sub_menu").not('.-style_open_sub_menu').height(0);
 	});
 }
 /*Open sub menu*/
