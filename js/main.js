@@ -135,6 +135,28 @@ function activationModal() {
 		});
 		$('.ui-dialog').eq(1).addClass('confirmation_modal');
 	};
+
+	if ($("#tableOfSizes_modal").length) {
+		$( "#tableOfSizes_modal" ).dialog({
+				autoOpen: false,
+				maxWidth: 800,
+				modal: true,
+				draggable: false,
+				resizable: false,
+				width: 800,
+				height: 600,
+			});
+			$('body').on('click', '.js-tableOfSizes', function(e) {
+				e.preventDefault();
+			$( "#tableOfSizes_modal" ).dialog( "open" );
+		});
+		$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
+			$('#tableOfSizes_modal').dialog( "close" );
+		});
+		$('.ui-dialog').eq(1).addClass('confirmation_modal');
+		$('.ui-dialog').addClass('collection_modal');
+	};
+
 };
 /*END Modal generation*/
 
