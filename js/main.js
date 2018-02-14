@@ -8,6 +8,7 @@ $(document).ready(function() {
 	activationModal();
 	disableSocialFields();
 	selectLocation();
+	countLetters();
 });
 
 /*Show days in dashboard*/
@@ -51,7 +52,7 @@ function openSubMenu() {
 	$('body').on('click', '.js-nawMenu > li > a', function(e) {
 		e.preventDefault();
 		var menuHeight = $(e.target).next().children().length;
-		var finalHeight = 36 * menuHeight;
+		var finalHeight = (36 * menuHeight) + 14;
 		$(e.target).toggleClass('-style_naw_menu_open');
 		$(e.target).next().toggleClass('-style_open_sub_menu');
 		$(e.target).siblings('.sub_menu.-style_open_sub_menu').height(finalHeight);
@@ -108,15 +109,15 @@ function activationModal() {
 	    	width: 640,
 	    	height: 250,
 	    });
-	    $('body').on('click', '.my_collection', function(e) {	
+	    $('body').on('click', '.js-myCollection', function(e) {	
 	    	e.preventDefault();
 		  $( "#collection_modal" ).dialog( "open" );
 		});
-		$('.ui-dialog').addClass('collection_modal');
+		$('#collection_modal').parents('.ui-dialog').addClass('collection_modal');
 		$('.ui-dialog-titlebar-close').html('');
 	};
 
-	if ($("#collection_modal").length) {
+	if ($( "#collection_modal" ).length) {
 		$( "#confirmation_modal" ).dialog({
 	    	autoOpen: false,
 	    	maxWidth: 640,
@@ -126,14 +127,50 @@ function activationModal() {
 	    	width: 640,
 	    	height: 135,
 	    });
-	    $('body').on('click', '.remove_collection', function(e) { 	
+	    $('body').on('click', '.js-removeCollection', function(e) { 	
 	    	e.preventDefault();
 		  $( "#confirmation_modal" ).dialog( "open" );
 		});
 		$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
 			$('#confirmation_modal').dialog( "close" );
 		});
-		$('.ui-dialog').eq(1).addClass('confirmation_modal');
+		$( '#confirmation_modal' ).parents('.ui-dialog').addClass('confirmation_modal');
+	};
+
+	if ($( "#edit_collection_modal" ).length) {
+			$( "#edit_collection_modal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 640,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 640,
+	    	height: 250,
+	    });
+	    $('body').on('click', '.js-editCollectionModal', function(e) {	
+	    	e.preventDefault();
+		  $( "#edit_collection_modal" ).dialog( "open" );
+		});
+		$( '#edit_collection_modal' ).parents('.ui-dialog').addClass( 'collection_modal' );
+		$( '.ui-dialog-titlebar-close' ).html('');
+	};
+
+	if ($( "#edit_collection_modal" ).length) {
+			$( "#image_modal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 572,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 572,
+	    	height: 478,
+	    });
+	    $('body').on('click', '.js-collectionModalImageBig', function(e) {	
+	    	e.preventDefault();
+		  $( "#image_modal" ).dialog( "open" );
+		});
+		$( '#image_modal' ).parents('.ui-dialog').addClass( 'collection_modal' );
+		$( '.ui-dialog-titlebar-close' ).html('');
 	};
 };
 /*END Modal generation*/
@@ -169,3 +206,22 @@ function selectLocation() {
 	});
 };
 /*End Select location dropdown*/
+
+/*Count letters*/
+function countLetters() {
+	$('body').on('keydown', '.js-countLettersField', function(e) {
+		var lettersLength = $('.js-countLettersField').val().length;
+		$('.js-countLettersValue').text(lettersLength);
+		if (lettersLength == 0) {
+			$('.js-countLettersValue').text(0);
+		}
+	});
+	$('body').on('keydown', '.js-countLettersField2', function(e) {
+		var lettersLength = $('.js-countLettersField2').val().length;
+		$('.js-countLettersValue2').text(lettersLength);
+		if (lettersLength == 0) {
+			$('.js-countLettersValue2').text(0);
+		}
+	});
+};
+/*End Count letters*/
