@@ -87,9 +87,18 @@
 					</div>
 					<div class="imageProduct">
 						<div class="productColumn">
-							<div class="itemImageWrapper">
-								<img src="img/fish.png" alt="">
-								<a href="#" class="itemImageDelete"></a>
+							<div class="itemImageWrapper -style_noImage">
+								<div class="collection_photo">
+                  <input type="file" class="collection_photo_file">
+                  <div class="collection_photo_add_image">
+										<span class="messagePlain">No Image</span>
+										<i class="icon-plus"></i>
+                    <ul>
+                      <li>Add back image?</li>
+                      <li><span class="info">Price will be incremented in <span class="price">&pound;4</span></span></li>
+                    </ul>
+                  </div>
+                </div>
 							</div>
 							<div class="itemColumn">
 								<a href="#" class="itemChangeImage">Change Image</a>
@@ -133,7 +142,7 @@
 							<span class="imageToggleValue">All colours Enabled</span>
 						</div>
 						<div class="imageColours">
-							<div class="checkboxColorWrapper">
+							<div class="checkboxColorWrapper -state_selected">
 	              <input type="checkbox" checked="checked" id="a2" class="checkboxColor">
 	              <label style="background-color: purple;" for="a2"><i class="glyphicon glyphicon-ok"></i></label>
 	            </div>

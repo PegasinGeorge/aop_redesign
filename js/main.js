@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	customScrollbar();
 	selectedDays();
 	showStyleOfProduct();
 	openSubMenu();
@@ -10,6 +11,14 @@ $(document).ready(function() {
 	selectLocation();
 	countLetters();
 });
+
+// Scrollbar (edit product 2)
+function customScrollbar(){
+	if ($('.imageModelsList').length) {
+		$('.imageModelsList').mCustomScrollbar();
+	}
+}
+// End Scrollbar (edit product 2)
 
 /*Show days in dashboard*/
 function selectedDays() {
@@ -153,6 +162,27 @@ function activationModal() {
 		});
 		$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
 			$('#tableOfSizes_modal').dialog( "close" );
+		});
+		$('.ui-dialog').eq(1).addClass('confirmation_modal');
+		$('.ui-dialog').addClass('collection_modal');
+	};
+
+	if ($("#price_variants").length) {
+		$( "#price_variants" ).dialog({
+				autoOpen: false,
+				maxWidth: 800,
+				modal: true,
+				draggable: false,
+				resizable: false,
+				width: 800,
+				height: 600,
+			});
+			$('body').on('click', '.js-priceVariants', function(e) {
+				e.preventDefault();
+			$( "#price_variants" ).dialog( "open" );
+		});
+		$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
+			$('#price_variants').dialog( "close" );
 		});
 		$('.ui-dialog').eq(1).addClass('confirmation_modal');
 		$('.ui-dialog').addClass('collection_modal');
