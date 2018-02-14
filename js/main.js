@@ -184,7 +184,7 @@ function activationModal() {
 	    	draggable: false,
 	    	resizable: false,
 	    	width: 572,
-	    	height: 478,
+	    	height: 478
 	    });
 	    $('body').on('click', '.js-collectionModalImageBig', function(e) {
 	    	e.preventDefault();
