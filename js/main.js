@@ -127,7 +127,7 @@ function activationModal() {
 	    	width: 640,
 	    	height: 135,
 	    });
-	    $('body').on('click', '.js-removeCollection', function(e) { 	
+	    $('body').on('click', '.js-removeCollection', function(e) {
 	    	e.preventDefault();
 		  $( "#confirmation_modal" ).dialog( "open" );
 		});
@@ -168,7 +168,7 @@ function activationModal() {
 	    	width: 640,
 	    	height: 250,
 	    });
-	    $('body').on('click', '.js-editCollectionModal', function(e) {	
+	    $('body').on('click', '.js-editCollectionModal', function(e) {
 	    	e.preventDefault();
 		  $( "#edit_collection_modal" ).dialog( "open" );
 		});
@@ -186,7 +186,7 @@ function activationModal() {
 	    	width: 572,
 	    	height: 478,
 	    });
-	    $('body').on('click', '.js-collectionModalImageBig', function(e) {	
+	    $('body').on('click', '.js-collectionModalImageBig', function(e) {
 	    	e.preventDefault();
 		  $( "#image_modal" ).dialog( "open" );
 		});
@@ -230,14 +230,14 @@ function selectLocation() {
 
 /*Count letters*/
 function countLetters() {
-	$('body').on('keydown', '.js-countLettersField', function(e) {
+	$('body').on('keyup', '.js-countLettersField', function(e) {
 		var lettersLength = $('.js-countLettersField').val().length;
 		$('.js-countLettersValue').text(lettersLength);
 		if (lettersLength == 0) {
 			$('.js-countLettersValue').text(0);
 		}
 	});
-	$('body').on('keydown', '.js-countLettersField2', function(e) {
+	$('body').on('keyup', '.js-countLettersField2', function(e) {
 		var lettersLength = $('.js-countLettersField2').val().length;
 		$('.js-countLettersValue2').text(lettersLength);
 		if (lettersLength == 0) {
