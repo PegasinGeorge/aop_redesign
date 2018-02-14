@@ -81,7 +81,7 @@ function styleProductsList() {
 /*Disable product*/
 function disableProductItem() {
     var checkbox = $('input.js-productCheckbox:checkbox:not(:checked)');
-    
+
   	if (checkbox.prop('checked')){
     	checkbox.parents('.product_item').removeClass('-style_disabled_product');
 	} else {
@@ -100,18 +100,18 @@ function disableProductItem() {
 /*Modal generation*/
 function activationModal() {
 	if ($("#collection_modal").length) {
-			$( "#collection_modal" ).dialog({
-	    	autoOpen: false,
-	    	maxWidth: 640,
-	    	modal: true,
-	    	draggable: false,
-	    	resizable: false,
-	    	width: 640,
-	    	height: 250,
-	    });
-	    $('body').on('click', '.js-myCollection', function(e) {	
-	    	e.preventDefault();
-		  $( "#collection_modal" ).dialog( "open" );
+		$( "#collection_modal" ).dialog({
+    	autoOpen: false,
+    	maxWidth: 640,
+    	modal: true,
+    	draggable: false,
+    	resizable: false,
+    	width: 640,
+    	height: 250,
+    });
+    $('body').on('click', '.my_collection', function(e) {
+    	e.preventDefault();
+	  	$( "#collection_modal" ).dialog( "open" );
 		});
 		$('#collection_modal').parents('.ui-dialog').addClass('collection_modal');
 		$('.ui-dialog-titlebar-close').html('');
@@ -135,6 +135,27 @@ function activationModal() {
 			$('#confirmation_modal').dialog( "close" );
 		});
 		$( '#confirmation_modal' ).parents('.ui-dialog').addClass('confirmation_modal');
+	};
+
+	if ($("#tableOfSizes_modal").length) {
+		$( "#tableOfSizes_modal" ).dialog({
+				autoOpen: false,
+				maxWidth: 800,
+				modal: true,
+				draggable: false,
+				resizable: false,
+				width: 800,
+				height: 600,
+			});
+			$('body').on('click', '.js-tableOfSizes', function(e) {
+				e.preventDefault();
+			$( "#tableOfSizes_modal" ).dialog( "open" );
+		});
+		$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
+			$('#tableOfSizes_modal').dialog( "close" );
+		});
+		$('.ui-dialog').eq(1).addClass('confirmation_modal');
+		$('.ui-dialog').addClass('collection_modal');
 	};
 
 	if ($( "#edit_collection_modal" ).length) {
@@ -178,7 +199,7 @@ function activationModal() {
 /*Disable social fields*/
 function disableSocialFields() {
     var checkbox = $('input.js-socialCheckbox:checkbox:not(:checked)');
-    
+
   	if (checkbox.prop('checked')){
     	checkbox.parents('.style-social_field').removeClass('-is-disbled_social_field');
 	} else {
