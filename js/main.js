@@ -126,7 +126,7 @@ function activationModal() {
 		$('.ui-dialog-titlebar-close').html('');
 	};
 
-	if ($( "#collection_modal" ).length) {
+	if ($( "#confirmation_modal" ).length) {
 		$( "#confirmation_modal" ).dialog({
 	    	autoOpen: false,
 	    	maxWidth: 640,
