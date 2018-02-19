@@ -9,11 +9,12 @@ $(document).ready(function() {
 	disableSocialFields();
 	selectLocation();
 	countLetters();
+	reasonReprint();
 });
 
 /*Show days in dashboard*/
 function selectedDays() {
-	let firstDay = $('.js-selectedDay > li:nth-child(1) > a').text();
+	var firstDay = $('.js-selectedDay > li:nth-child(1) > a').text();
 	$('.js-selectedLastDays').text(firstDay);
 	jQuery('body').on('click', '.js-selectedDay a', function(e) {
 		e.preventDefault();
@@ -38,7 +39,7 @@ function currentImage() {
 
 /*Show style of product*/
 function showStyleOfProduct() {
-	let firstDay = $('.js-selectedStyle > li:nth-child(1) > a').text();
+	var firstDay = $('.js-selectedStyle > li:nth-child(1) > a').text();
 	$('.js-selectedCurrentStyle').text(firstDay);
 	jQuery('body').on('click', '.js-selectedStyle a', function(e) {
 		e.preventDefault();
@@ -46,6 +47,22 @@ function showStyleOfProduct() {
 	});
 };
 /*END Show style of product*/
+
+/*Reason reprint select*/
+function reasonReprint() {
+	var firstDay = $('.js-reasonReprint > li:nth-child(1) > a').text();
+	$('.js-selectedReasonReprint').text(firstDay);
+	jQuery('body').on('click', '.js-reasonReprint > li > a', function(e) {
+		e.preventDefault();
+	    $('.js-selectedReasonReprint').text($(this).text());
+		if ($(e.target).parent().hasClass('js-otherReason')) {
+			$('.style-custom_reason_row').addClass('-style-active_custom_reason');
+		} else {
+			$('.style-custom_reason_row').removeClass('-style-active_custom_reason');
+		};
+	});
+};
+/*END Reason reprint select*/
 
 /*Open sub menu*/
 function openSubMenu() {
@@ -191,6 +208,24 @@ function activationModal() {
 		  $( "#image_modal" ).dialog( "open" );
 		});
 		$( '#image_modal' ).parents('.ui-dialog').addClass( 'collection_modal' );
+		$( '.ui-dialog-titlebar-close' ).html('');
+	};
+
+	if ($( "#reprint_order_modal" ).length) {
+			$( "#reprint_order_modal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 572,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 572,
+	    	height: 478
+	    });
+	    $('body').on('click', '.js-reprintModal', function(e) {
+	    	e.preventDefault();
+		  $( "#reprint_order_modal" ).dialog( "open" );
+		});
+		$( '#reprint_order_modal' ).parents('.ui-dialog').addClass( 'collection_modal -style-reprint-modal' );
 		$( '.ui-dialog-titlebar-close' ).html('');
 	};
 };
