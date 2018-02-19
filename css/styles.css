@@ -2713,7 +2713,7 @@ a.order_reprint > span {
 .orders_board_pagination .pagination > li.disabled > a {
 	color: #99A6AD;
 }
-.orders_board_pagination .pagination>li>a:focus, .orders_board_pagination .pagination>li>a:hover, .orders_board_pagination .pagination>li>span:focus, .orders_board_pagination .pagination>li>span:hover, .orders_board_pagination .pagination>li.active > a:hover {
+.orders_board_pagination .pagination>li>a:focus, .orders_board_pagination .pagination>li>a:hover, .orders_board_pagination .pagination>li>span:focus, .orders_board_pagination .pagination>li>span:hover {
 	background-color: #2F99B9;
 	border: 1px solid #2F99B9;
 	color: #fff;
@@ -2722,6 +2722,7 @@ a.order_reprint > span {
 	color: #fff;
 	background-color: #33B5E5;
 	border: 1px solid #33B5E5;
+	pointer-events: none;
 }
 .reprint_modal_content {
 	width: 100%;
