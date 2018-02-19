@@ -2701,6 +2701,7 @@ a.order_reprint > span {
 .orders_board_pagination .pagination > li > a {
 	border: 2px solid #F3F2EE;
 	margin: 0 0 0 -2px;
+	z-index: 1;
 	color: #33B5E5;
 	transition: all .3s ease-in-out;
 }
