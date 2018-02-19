@@ -11,6 +11,7 @@ $(document).ready(function() {
 	selectLocation();
 	countLetters();
 	reasonReprint();
+	selectCheckboxes();
 });
 
 // Scrollbar (edit product 2)
@@ -122,6 +123,31 @@ function disableProductItem() {
 	});
 };
 /*END Disable product*/
+
+/*Reprint order checkboxes select all*/
+function selectCheckboxes() {
+	var mainCheckbox = $(".js-reprintMainCheckbox");
+
+	if (mainCheckbox.prop('checked')) {
+		$('.js-reprintCheckbox').prop('checked', true);
+	} else {
+		$('.js-reprintCheckbox').removeAttr('checked');
+	};
+
+	$('body').on('click', '.js-reprintMainCheckbox', function(e) {
+		if ($(e.target).prop('checked') == true) {
+			$('.js-reprintCheckbox').prop('checked', true);
+		} else {
+			$('.js-reprintCheckbox').removeAttr('checked');
+		};
+	});
+	$('body').on('click', '.js-reprintCheckbox', function(e) {
+		if ($(e.target).prop('checked') == false) {
+			$('.js-reprintMainCheckbox').removeAttr('checked');
+		}
+	});
+};
+/*END Reprint order checkboxes select all*/
 
 /*Modal generation*/
 function activationModal() {
