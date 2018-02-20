@@ -1683,9 +1683,9 @@ a.profile_photo_remove:hover span {
 	background-image: url("../img/check.png");
 	width: 13px;
 	height: 13px;
-    top: 12px;
-    left: 3px;
-    z-index: 1;
+  top: 2px;
+  left: 3px;
+  z-index: 1;
 }
 .square_checkbox_wrapper input[type=checkbox]:checked + label:after{
     background-color: #23B7E5;
@@ -2959,7 +2959,7 @@ a.order_reprint > span {
 	top: 2px;
 }
 .checkbox_wrapper_no_margin input + label:after {
-	margin: 0; 
+	margin: 0;
 }
 span.reprint_order_colour {
 	display: inline-block;
