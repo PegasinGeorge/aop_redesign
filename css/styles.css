@@ -1755,6 +1755,11 @@ a.profile_photo_remove span {
 	-webkit-background-size: 25px 25px;
 	background-size: 25px 25px;
 	background-image: url('../img/back.png');
+	transition: all .3s ease-in-out;
+}
+
+.backButton:hover{
+	background-image: url('../img/back-hover.png');
 }
 
 a.button__save{
@@ -1783,8 +1788,8 @@ a.button__save:hover{
 }
 
 .itemTitle{
-	color: #464646;
-	font-size: 24px;
+	color: #58666E;
+	font-size: 22px;
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
@@ -1819,28 +1824,48 @@ a.button__save:hover{
 	cursor: pointer;
 	background-repeat: no-repeat;
 	margin: 0 0 0 20px;
+	transition: all .3s ease-in-out;
+}
+
+.hint:hover{
+	background-image: url('../img/info-hover.png');
+}
+
+.-hint_anchor{
 	position: relative;
+}
+
+.hintInfo.-large{
+	min-width: 460px;
+}
+
+.hintInfo.-medium{
+	min-width: 250px;
+}
+
+.hintInfo.-small{
+	min-width: 160px;
 }
 
 .hintInfo{
 	position: absolute;
-	top: 25px;
-	left: 25px;
+	top: 100%;
+	left: 100%;
 	background-color: #fff;
 	border-radius: 2px;
 	padding: 10px;
 	-webkit-box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
   -moz-box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
   box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
-	width: 250px;
 	font-size: 16px;
 	z-index: -1;
 	opacity: 0;
 	transition: all .3s ease-in-out;
+	filter: unset !important;
 }
 
-.hint:hover > .hintInfo{
-	z-index: 99;
+.-hint_anchor:hover > .hintInfo{
+	z-index: 999;
 	opacity: 1;
 }
 
@@ -1851,6 +1876,11 @@ a.button__save:hover{
 	background-position: 0 50%;
 	color: #58666E;
 	font-size: 24px;
+	transition: all .3s ease-in-out;
+}
+
+.itemPrice:hover{
+	background-image: url('../img/price-hover.png');
 }
 
 .productColumn{
@@ -1890,6 +1920,11 @@ a.button__save:hover{
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+
+.itemImageDelete:hover{
+	background-image: url('../img/trashCan-hover.png');
 }
 
 a.itemChangeImage{
@@ -2015,11 +2050,17 @@ a.itemLink:hover{
 	transition: all .3s ease-in-out;
 }
 
-.controlMirrorHorizontal:hover,
-.controlMirrorVertical:hover,
-.controlReplicate:hover,
+.controlMirrorHorizontal:hover{
+	background-image: url('../img/controlMirrorHorizontal-hover.png');
+}
+.controlMirrorVertical:hover{
+	background-image: url('../img/controlMirrorVertical-hover.png');
+}
+.controlReplicate:hover{
+	background-image: url('../img/replicate-hover.png');
+}
 .controlRotate:hover{
-	opacity: .6;
+	background-image: url('../img/rotate-hover.png');
 }
 
 .controlMirrorVertical{
@@ -2059,8 +2100,14 @@ a.itemLink:hover{
 }
 
 .imageToggleValue{
-	margin: 0 0 0 20px;
-	font-size: 16px;
+	margin: 0 0 0 15px;
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+.imageSubTitle{
+	font-size: 13px;
+	color: #99A6AD;
 }
 
 .settingsColumn{
@@ -2078,11 +2125,27 @@ a.itemLink:hover{
 }
 
 .checkboxColorWrapper{
-	width: 39px;
-	height: 39px;
+	width: 36px;
+	height: 36px;
 	margin: 4px;
 	display: inline-block;
 	cursor: pointer;
+}
+
+.checkboxColorWrapper.-state_selected{
+	position: relative;
+}
+
+.checkboxColorWrapper.-state_selected label:before{
+	content: '';
+	width: 36px;
+	height: 36px;
+	background-color: transparent;
+	border: 3px solid #23b7e5;
+	display: block;
+	position: absolute;
+	left: -1px;
+	top: -1px;
 }
 
 .checkboxColor{
@@ -2099,17 +2162,15 @@ a.itemLink:hover{
 	position: relative;
 }
 
-.checkboxColor + label > i{
+/* .checkboxColor + label{
 	position: absolute;
-}
+} */
 
-.checkboxColor:checked + label > i{
-	font-size: 22px;
-  color: white;
-  mix-blend-mode: exclusion;
-  font-weight: 100;
-	left: 7px;
-	top: 6px;
+.checkboxColor:checked + label{
+	background-image: url('../img/check-symbol.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 22px;
 }
 
 .productSizesAvailable{
@@ -2122,14 +2183,21 @@ a.itemLink:hover{
 
 .productSize{
 	background-color: #dee5e7;
+	color: #464646;
 	display: block;
 	text-align: center;
-	width: 50px;
-	height: 50px;
-	line-height: 48px;
-	font-size: 18px;
+	width: 33px;
+	height: 33px;
+	line-height: 32px;
+	font-size: 14px;
 	border-radius: 50%;
-	margin: 5px;
+	margin: 4px;
+}
+
+.messagePlain{
+	font-size: 16px;
+	color: #99A6AD;
+	margin: 5px 0;
 }
 
 .textDescription{
@@ -2188,6 +2256,7 @@ a.itemLink:hover{
   justify-content: space-between;
   padding: 7px 0;
   align-items: center;
+  height: 36px;
 }
 
 .pageBlock.col-xs-9.col-sm-9.col-md-9.col-lg-9 {
@@ -2202,6 +2271,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+	-moz-appearance: textfield;
 }
 
 .infoColumnItem__price {
@@ -2209,6 +2279,9 @@ input[type=number]::-webkit-outer-spin-button {
   border: 1px solid #e6e8e8;
   padding: 4px;
   height: 35px;
+	-webkit-appearance: none;
+  margin: 0;
+	-moz-appearance: textfield;
 }
 
  /* / Edit Product Page */
@@ -2893,12 +2966,11 @@ p.order_checkbox_heading {
 	border-radius: 3px;
 	background-color: #fff;
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #23B7E5;
-    height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #23B7E5;
+  height: 100%;
 }
 .itemImageWrapper .collection_photo_add_image i {
 	font-weight: 900;
@@ -3001,4 +3073,8 @@ p.order_checkbox_heading {
 
 .itemLink.-style_modal{
   margin: 25px 0 5px 0;
+}
+
+.settingsColumn .show_cetegories{
+	margin: 10px 0;
 }
