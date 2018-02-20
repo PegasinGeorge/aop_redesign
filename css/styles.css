@@ -1681,6 +1681,7 @@ a.profile_photo_remove:hover span {
 	position: absolute;
 	cursor: pointer;
 	background-image: url("../img/check.png");
+  background-repeat: no-repeat;
 	width: 13px;
 	height: 13px;
   top: 2px;
@@ -1690,6 +1691,22 @@ a.profile_photo_remove:hover span {
 .square_checkbox_wrapper input[type=checkbox]:checked + label:after{
     background-color: #23B7E5;
     border: 2px solid #23B7E5;
+}
+
+.square_checkbox_wrapper.-style_light label:after{
+	border: 1px solid #dee5e7;
+	border-radius: 0;
+	width: 20px;
+	height: 20px;
+}
+
+.square_checkbox_wrapper.-style_light input + label:before{
+	top: 3px;
+	left: 4px;
+}
+
+.square_checkbox_wrapper.-style_light{
+	margin: 0 0 15px;
 }
 .style-name_profile_checkbox_wrapper {
 	width: 100%;
