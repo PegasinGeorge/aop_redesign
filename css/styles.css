@@ -1661,6 +1661,7 @@ a.profile_photo_remove:hover span {
 	color: #99A6AD;
 	font-weight: 400;
 	cursor: pointer;
+	position: relative;
 }
 .square_checkbox_wrapper label:after {
 	content: "";
