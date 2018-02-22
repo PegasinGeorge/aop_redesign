@@ -267,6 +267,27 @@ function activationModal() {
 		$( '.ui-dialog-titlebar-close' ).html('');
 	};
 
+	if ($( "#preferences_modal" ).length) {
+			$( "#preferences_modal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 572,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 520,
+	    	height: 478
+	    });
+	    $('body').on('click', '.js-preferencesModal', function(e) {
+	    	e.preventDefault();
+		  $( "#preferences_modal" ).dialog( "open" );
+		});
+		$('body').on('click', '.ui-widget.collection_modal .js-closeModalButtons button', function(e) {
+			$( '#preferences_modal' ).dialog( "close" );
+		});
+		$( '#preferences_modal' ).parents('.ui-dialog').addClass( 'collection_modal -style-noCloseButton' );
+		$( '.ui-dialog-titlebar-close' ).html('');
+	};
+
 	if ($( "#reprint_order_modal" ).length) {
 			$( "#reprint_order_modal" ).dialog({
 	    	autoOpen: false,
@@ -337,3 +358,67 @@ function countLetters() {
 	});
 };
 /*End Count letters*/
+
+/*Stripe activation*/
+(function() {
+var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+
+// Create an instance of Elements
+var elements = stripe.elements();
+
+  var elementStyles = {
+    base: {
+	    color: '#32325d',
+	    lineHeight: '18px',
+	    fontSmoothing: 'antialiased',
+	    '::placeholder': {
+	      color: '#aab7c4'
+	    }
+	},
+    invalid: {
+      color: '#58666E',
+      iconColor: '#fa755a'
+    }
+  };
+
+  var elementClasses = {
+    focus: 'focus',
+    empty: 'empty',
+    invalid: 'invalid',
+  };
+
+  var cardNumber = elements.create('cardNumber', {
+    style: elementStyles,
+    classes: elementClasses,
+  });
+
+  cardNumber.mount('#billing-card-number');
+
+  var cardExpiry = elements.create('cardExpiry', {
+    style: elementStyles,
+    classes: elementClasses,
+  });
+  cardExpiry.mount('#billing-card-expiry');
+
+  var cardCvc = elements.create('cardCvc', {
+    style: elementStyles,
+    classes: elementClasses,
+  });
+  cardCvc.mount('#billing-card-cvc');
+
+  var form = document.getElementById('payment-form');
+	form.addEventListener('submit', function(event) {
+	  event.preventDefault();
+
+	  stripe.createToken(cardNumber, cardCvc, cardExpiry).then(function(result) {
+	    if (result.error) {
+	      // Inform the user if there was an error
+	      var errorElement = document.getElementById('card-errors');
+	      //errorElement.textContent = result.error.message;
+	    } else {
+	      // Send the token to your server
+	      stripeTokenHandler(result.token);
+	    }
+	  });
+	});
+})();

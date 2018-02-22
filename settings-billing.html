@@ -5,8 +5,8 @@
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="jquery-ui/jquery-ui.min.css" rel="stylesheet">
-  <link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet">
-  <link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet">
+  <!-- <link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet">
+  <link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
@@ -18,7 +18,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<title>Billing</title>
+	<title>Settings Billing</title>
 </head>
 <body>
   <div class="content_wrapper">
@@ -87,82 +87,153 @@
       <div class="row">
         <div class="col-xs-12 dashboard_heading">
           <div class="dashboard_name">
-            <p>COLLECTIONS</p>
-            <span>Create your collections, just add your images!</span>
-          </div>
-          <div class="dashboard_show">
-            <span>Show</span>
-            <div class="btn-group">
-              <span class="show_days_quant style-text_center js-selectedLastDays"></span>
-              <button class="btn show_days_caret dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu style_dropdown_country js-selectedDay">
-                <li><a href="#">Newerst first</a></li>
-                <li><a href="#">Option 2</a></li>
-                <li><a href="#">Option 3</a></li>
-                <li><a href="#">Option 4</a></li>
-              </ul>
-            </div>
+            <p>BILLING</p>
+            <span>Manage your billing preferences &amp; Information</span>
           </div>
         </div>
       </div>
-      <div class="collections_page_content">
-        <div class="row">
-          <div class="collections_items__wrapper">
-            <div class="collection_item__wrapper style_collection_item_wide">
-              <div class="collection_item style-collection_photo_item -style-no_collection_photo">
-                <div class="collection_photo">
-                  <input type="file" class="collection_photo_file">
-                  <div class="collection_photo_add_image"><i class="icon-plus"></i>
-                    <ul>
-                      <li>Add your image</li>
-                      <li>or drop it here</li>
-                    </ul>
+      <div class="settings_page_content">
+        <div class="row -style_wider">
+          <div class="pageBlock col-xs-12 col-sm-4 settings_item">
+            <div class="settings_item__heading">
+              <div class="settings_item__heading_info">
+                <p>Outstanding balance</p>
+              </div>
+            </div>
+            <div class="settings_item__content">
+              <div class="settings_item__content_info">
+                <p>This is amount the of money that you owe us (since your last billing circle) for <span>fulfilling and shipping</span> your Alloverprint.it orders</p>
+              </div>
+              <div class="settings_item__content_chart">
+                <div class="settings_chart_wraper">
+                  <img alt="img" src="./img/billing-chart.png" class="img-responsive">
+                </div>
+                <div class="settings_chart_info">
+                  <p>&pound; <span>28.8</span></p>
+                  <span>COSTS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pageBlock col-xs-12 col-sm-8 settings_item">
+            <div class="settings_item__heading">
+              <div class="settings_item__heading_info">
+                <p>Payment methods</p>
+              </div>
+              <a href="#" class="heading_link">NEED HELP?</a>
+            </div>
+            <div class="settings_item__content payment_systems__wrapper">
+              <div class="payment_system_block style_billingCard">
+                <div class="settings_item__content_info">
+                  <h6>Billing Card</h6>
+                  <p>You need to have a card on record before we can process, fulfill and ship your Alloverprint.it orders.</p>
+                </div>
+                <div class="card_information_wrapper">
+                  <div class="card_information_unfilled billing_card">
+                    <form id="payment-form">
+                      <div class="card_information_row">
+                        <div class="card_information_item">
+                          <label for="billing-card-number">
+                            Card number
+                          </label>
+                          <div id="billing-card-number" class="field empty"></div>
+                        </div>
+                      </div>
+                      <div class="card_information_row -style_double_information_item">
+                        <div class="card_information_item">
+                          <label for="billing-card-expiry">
+                            Expiry Date <span>(mm/yy)</span>
+                          </label>
+                          <div id="billing-card-expiry" class="field empty"></div>
+                        </div>
+                        <div class="card_information_item">
+                          <label for="billing-card-cvc">
+                            CVV / CVC
+                          </label>
+                          <div id="billing-card-cvc" class="field empty"></div>
+                        </div>
+                      </div>
+                      <button type="submit" data-tid="elements_examples.form.pay_button" class="stripe_button">Check out with</button>
+                    </form>
+                  </div>
+                  <div class="card_information_filled">
+                    <div class="card_information_row -style_double_information_item">
+                      <div class="card_information_item">
+                        <span>Card number</span>
+                        <p class="card_information_hidden">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;<span class="after_dots">0057</span></p>
+                      </div>
+                      <div class="card_information_item">
+                        <a href="#" class="change_card"><span></span>CHANGE CARD?</a>
+                      </div>
+                    </div>
+                    <div class="card_information_row -style_double_information_item">
+                      <div class="card_information_item">
+                        <span>Expiry Date <span>(mm/yy)</span></span>
+                        <p class="card_information_hidden"><span>02/08/21</span></p>
+                      </div>
+                      <div class="card_information_item">
+                        <span>CVV / CVC</span>
+                        <p class="card_information_hidden">&bull;&bull;&bull;&bull;</p>
+                      </div>
+                    </div>
+                    <div class="card_information_row pay_credit_card_wrap">
+                      <button type="submit" data-tid="elements_examples.form.pay_button" class="stripe_button">Check out with</button>
+                    </div>
                   </div>
                 </div>
-                <div class="collection_photo_description">
-                  <p>Collection Title</p>
-                  <input type="text" class="js-countLettersField" maxlength="50">
-                  <div class="collection_count_letters_wrap">
-                    <span><span class="collection_count_letters js-countLettersValue">0</span>/50</span>
-                  </div>
-                  <div class="collection_photo_button_wrap">
-                    <a href="#">CREATE COLLECTION</a>
-                  </div>
+              </div>
+              <div class="payment_system_block style_otherPaySystems">
+                <div class="settings_item__content_info">
+                  <h6>Others</h6>
+                  <p>Or you could use one of the following methods:</p>
+                </div>
+                <div class="card_information_wrapper">
+                  <div class="paypal_button_wrapper">
+                  <input type="submit" value="Check out with">
+                </div>
                 </div>
               </div>
             </div>
-            <div class="collection_item__wrapper style_collection_item_standart">
-              <div class="collection_item style-created_collection_item">
-                <div class="created_collection_item__thumbnail" style="background-image: url('./img/fish.png');">
-                  <a href="#" class="js-editCollectionModal"></a>
-                </div>
-                <p class="created_collection_item__description">
-                  Fish into fish
-                </p>
+          </div>
+        </div>
+        <div class="row -style_wider">
+          <div class="pageBlock col-xs-12 settings_item">
+            <div class="settings_item__heading">
+              <div class="settings_item__heading_info">
+                <p>Payment history</p>
               </div>
             </div>
-            <div class="collection_item__wrapper style_collection_item_standart">
-              <div class="collection_item style-created_collection_item">
-                <div class="created_collection_item__thumbnail" style="background-image: url('./img/flying-fish.png');">
-                  <a href="#" class="js-editCollectionModal"></a>
-                </div>
-                <p class="created_collection_item__description">
-                  Flying whale with corolfull balloons
-                </p>
-              </div>
-            </div>
-            <div class="collection_item__wrapper style_collection_item_standart">
-              <div class="collection_item style-empty_collection">
-                
-              </div>
-            </div>
-            <div class="collection_item__wrapper style_collection_item_standart">
-              <div class="collection_item style-next_collection_item">
-                
-              </div>
-            </div>
+            <div class="orders_board__content -style_wider_board">
+            <table>
+              <tr>
+                <th>Date <div class="orders_sorting"><a href="#"></a><a href="#"></a></div></th>
+                <th>Success</th>
+                <th>Provider</th>
+                <th>Authomatic</th>
+                <th>Amount <div class="orders_sorting"><a href="#"></a><a href="#"></a></div></th>
+                <th>CSV</th>
+                <th>PDF</th>
+              </tr>
+              <tr>
+                <td><p class="order_time">Jan 31, 2018 7:21am</p></td>
+                <td><div class="order_status_items"><span>Yes</span></div></td>
+                <td><div class="order_status_items"><span>Stripe</span></div></td>
+                <td><div class="order_status_items"><span>No</span></div></td>
+                <td><span>&pound; 19.5</span></td>
+                <td><a href="#" class="order_reprint" download>DOWNLOAD CSV</a></td>
+                <td><a href="#" class="order_reprint" download>DOWNLOAD PDF</a></td>
+              </tr>
+              <tr>
+                <td><p class="order_time">Dec 19, 2017 6:45am</p></td>
+                <td><div class="order_status_items"><span>Yes</span></div></td>
+                <td><div class="order_status_items"><span>Stripe</span></div></td>
+                <td><div class="order_status_items"><span>No</span></div></td>
+                <td><span>&pound; 12.7</span></td>
+                <td><a href="#" class="order_reprint" download>DOWNLOAD CSV</a></td>
+                <td><a href="#" class="order_reprint" download>DOWNLOAD PDF</a></td>
+              </tr>
+            </table>
+          </div>
           </div>
         </div>
       </div>    
@@ -170,45 +241,11 @@
   </section>
   </div>
 
-  <!-- modal fades -->
-<form action="#">
-  <div class="modal_fades">
-    <div id="edit_collection_modal" title="Basic dialog">
-      <div class="collection_modal_content">
-        <div class="collection_modal_thumbnail" style="background-image: url('./img/fish.png');">
-          <a href="#" class="js-collectionModalImageBig"></a>
-        </div>
-        <div class="collection_modal_description">
-          <p>Edit Collection Title</p>
-          <input type="text" class="js-countLettersField2" placeholder="Fish into fish" maxlength="50">
-          <div class="collection_count_letters_wrap">
-            <span><span class="collection_count_letters js-countLettersValue2">0</span>/50</span>
-          </div>
-          <a href="#" class="remove_collection js-removeCollection"><span></span>Remove whole collection</a>
-        </div>
-      </div>
-    </div>
-    <div id="image_modal" title="Basic dialog" class="image_modal">
-      <div class="image_modal_thumbnail" style="background-image: url('./img/fish.png');">      
-      </div>
-    </div>
-    <div id="confirmation_modal" title="Basic dialog">
-      <p>By removing whole collection all products assotiated with it, will also being removed</p>
-      <form action="#">
-        <div class="confirmation_modal_buttons">
-          <input type="submit" value="CANCEL">
-          <input type="submit" value="REMOVE">
-        </div>
-      </form>
-      </div>
-  </div>
-</form>
-<!--END modal fades -->
-
   <script src="dist/jquery.min.js"></script>
   <script src="jquery-ui/jquery-ui.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script async src="https://static.addtoany.com/menu/page.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
