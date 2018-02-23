@@ -12,6 +12,9 @@ $(document).ready(function() {
 	countLetters();
 	reasonReprint();
 	selectCheckboxes();
+
+	mobileMenu();
+	mobileFilters();
 });
 
 // Scrollbar (edit product 2)
@@ -337,3 +340,23 @@ function countLetters() {
 	});
 };
 /*End Count letters*/
+
+function mobileMenu(){
+	$('body').on('click', '.mainMenu_toggle', function(){
+		$(this).toggleClass('active');
+		$('.mainMenu_list').toggleClass('active');
+		$('.js-mainContent').toggleClass('-mainMenu_active');
+	});
+}
+
+function mobileFilters(){
+	$('body').on('click', '.js-filtersToggler', function(e){
+		$(this).parents('.js-nawMenu').toggleClass('filtersActive');
+	});
+
+	$('body').on('click', '.js-nawMenu .sub_menu a', function(e){
+		e.preventDefault();
+		$(this).parent().siblings().find('a').removeClass('active');
+		$(this).toggleClass('active');
+	});
+}

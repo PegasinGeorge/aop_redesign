@@ -20,12 +20,34 @@
     <![endif]-->
 	<title>All Over Print</title>
 </head>
-<body>
+<body class="dashboard">
   <div class="content_wrapper">
+  <div class="header-bottom">
+    <div class="container header_bottom_bar_wrapper">
+      <div class="row mainMenu__wrapper">
+        <a href="/" class="header_logo"><img alt="logo" src="./img/logo.png" class="img-responsive">All Over Print</a>
+      </div>
+    </div>
+  </div>
   <header class="page_header">
      <div class="header_top">
        <div class="container header_top_bar_wrapper">
-        <div class="row">
+        <div class="mainNavigation_wrapper">
+	        <div class="header_menu_wrapper mainMenu">
+						<a href="#" class="mainMenu_toggle">
+							<span class="mMt one"></span>
+							<span class="mMt two"></span>
+							<span class="mMt three"></span>
+							<span class="mMt four"></span>
+						</a>
+	          <ul class="mainMenu_list">
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link -dashboard">Dashboard</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Collections</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link active_page">Products</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Orders</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Settings</a></li>
+	          </ul>
+	        </div>
          <div class="header_top_bar">
            <div class="dropdown orders_top_dropdown">
               <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="sprites top_bell"></span><span class="value">2</span></a>
@@ -58,28 +80,7 @@
        </div>
      </div>
   </header>
-  <div class="header-bottom">
-    <div class="container header_bottom_bar_wrapper">
-      <div class="row mainMenu__wrapper">
-        <a href="/" class="header_logo"><img alt="logo" src="./img/logo.png" class="img-responsive">All Over Print</a>
-        <div class="header_menu_wrapper mainMenu">
-					<a href="#" class="mainMenu_toggle">
-						<span class="mMt one"></span>
-						<span class="mMt two"></span>
-						<span class="mMt three"></span>
-					</a>
-          <ul class="mainMenu_list">
-            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Dashboard</a></li>
-            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Collections</a></li>
-            <li class="mainMenu_item"><a href="#" class="mainMenu_link active_page">Products</a></li>
-            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Orders</a></li>
-            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Settings</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="main">
+  <section class="main js-mainContent">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 dashboard_heading">
