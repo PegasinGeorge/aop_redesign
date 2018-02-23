@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="jquery-ui/jquery-ui.min.css" rel="stylesheet">
+  <!-- <link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet">
+  <link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<title>Settings Preferences</title>
+</head>
+<body>
+  <div class="content_wrapper">
+  <header class="page_header">
+     <div class="header_top">
+       <div class="container header_top_bar_wrapper">
+        <div class="row">
+         <div class="header_top_bar">
+           <div class="dropdown orders_top_dropdown">
+              <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="sprites top_bell"></span><span class="value">2</span></a>
+              <div class="dropdown-menu style_list_notifications style_dropdown" aria-labelledby="dropdownMenu1">
+                <p class="value_notifications">You have 2 notifications</p>
+                <ul class="style_dropdown">
+                  <li>
+                    <a href="#"></a>
+                      <span class="order_picture" style="background-image: url('./img/product.png');"></span>
+                      <p>New colors for <span> <a href="#">Tote bag</a> </span>are been added! <span class="addition_date">6 hours ago</span></p>
+                  </li>
+                  <li><a href="#"></a><p><span><a href="#">Kids T-shirt</a></span> is the most popular this month <span class="addition_date">2 days ago</span></p></li>
+                  <li class="see_all_notifications"><a href="#"></a>See all notifications</li>
+                </ul>
+              </div> 
+            </div>
+            <div class="dropdown user_top_dropdown">
+              <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="user_name">Oduvan4ik Admin</span><span class="caret"></span><div class="user_photo user_online"><div class="user_photo_wrapper" style="background-image: url('./img/user.png');"></div></div>
+              </a>
+              <ul class="dropdown-menu style_dropdown" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Logout<i class="sprites"></i></a></li>
+              </ul>
+            </div>
+         </div>
+        </div>
+       </div>
+     </div>
+  </header>
+  <div class="header-bottom">
+    <div class="container header_bottom_bar_wrapper">
+      <div class="row">
+        <div class="col-sm-5 header_logo__wrapper">
+          <a href="/" class="header_logo"><img alt="logo" src="./img/logo.png" class="img-responsive">All Over Print</a>
+        </div> 
+        <div class="col-sm-7 header_menu_wrapper">
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#" class="active_page dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+              <ul class="dropdown-menu style_dropdown_country">
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Preferences</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 dashboard_heading">
+          <div class="dashboard_name">
+            <p>Preferences</p>
+            <span>Set &amp; Manage your preferences</span>
+          </div>
+        </div>
+      </div>
+      <div class="settings_page_content">
+        <div class="row -style_wider">
+          <div class="pageBlock col-xs-12 col-sm-8 settings_item">
+            <div class="settings_item__heading">
+              <div class="settings_item__heading_info">
+                <p>Setting your preferences</p>
+              </div>
+            </div>
+            <div class="settings_item__content style_preferences_info">
+              <div class="settings_item__content_info">
+                <p><span>Newly published collections will have</span> their products set up with <span>default values.</span></p>
+                <p>In the table below, feel free to edit Product descriptions, Markups, Product title and Status (Enable / Disable product for any collection created).</p>
+              </div> 
+              <ul class="preferences_tips -style_wider_board">
+                <li><span class="preferences_tip_label">Tip</span>Give roducts descriptive names</li>
+                <li><span class="preferences_tip_label">Tip</span>Make product descriptions attractive</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pageBlock col-xs-12 col-sm-4 settings_item style_otherPaySystems">
+            <div class="settings_item__heading">
+              <div class="settings_item__heading_info">
+                <p>Reset to default values</p>
+              </div>
+              <div class="checkbox_reset_all">
+                <input type="checkbox" name="reset_all" id="reset_all"/>
+                <label for="reset_all">RESET ALL</label>
+              </div>
+            </div>
+            <div class="settings_item__content">
+              <ul class="preferences_checkboxes">
+                <li>Name &amp; Descriptions <span class="preferences_checkbox"><input type="checkbox" name="c1" id="c1"/>
+                <label for="c1"></label></span></li>
+                <li>Marcups <span class="preferences_checkbox"><input type="checkbox" name="c2" id="c2"/>
+                <label for="c2"></label></span></li>
+                <li>Disabled all <span class="preferences_checkbox"><input type="checkbox" name="c3" id="c3"/>
+                <label for="c3"></label></span></li>
+                <li>Enable all <span class="preferences_checkbox"><input type="checkbox" name="c4" id="c4"/>
+                <label for="c4"></label></span></li>
+              </ul>
+              <div class="confirmation_buttons style_preferencesConfirmation">
+                <button>CANCEL</button>
+                <button class="-is_active">RESET</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row -style_wider">
+          <div class="pageBlock col-xs-12 settings_item">
+            <div class="settings_item__heading">
+              <div class="settings_item__heading_info">
+                <p>Table of preferences</p>
+              </div>
+              <div class="orders_board__heading_dropdowns">
+                <div class="dashboard_show">
+                  <span>Show</span>
+                  <div class="btn-group">
+                    <span class="show_days_quant js-selectedCurrentStyle"></span>
+                    <button class="btn show_days_caret dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu style_dropdown_country js-selectedStyle">
+                      <li><a href="#">10 products</a></li>
+                      <li><a href="#">20 products</a></li>
+                      <li><a href="#">30 products</a></li>
+                      <li><a href="#">40 products</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="orders_board__content -style_wider_board">
+            <table>
+              <tr>
+                <th>Product Title</th>
+                <th>Brand</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Markup</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d1" class="standart_checkbox"/>
+                    <label for="d1"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d2" class="standart_checkbox"/>
+                    <label for="d2"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d3" class="standart_checkbox"/>
+                    <label for="d3"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d4" class="standart_checkbox"/>
+                    <label for="d4"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d5" class="standart_checkbox"/>
+                    <label for="d5"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d6" class="standart_checkbox"/>
+                    <label for="d6"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d7" class="standart_checkbox"/>
+                    <label for="d7"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d8" class="standart_checkbox"/>
+                    <label for="d8"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d9" class="standart_checkbox"/>
+                    <label for="d9"><i></i></label>
+                        </div></td>
+              </tr>
+              <tr>
+                <td><div class="product_title_item"><input type="text" placeholder="Sublimation T-Shirt 2"><div class="confirmation_little_buttons style_productTitleConfirmation">
+                  <button class="title_confirm_cancel"></button>
+                  <button class="-is_active title_confirm_ok"></button>
+                </div></div></td>
+                <td><span>Alloverprint.it</span></td>
+                <td><span>JS001</span></td>
+                <td><div class="preferences_table_links"><a href="#" class="preferences_link_edit js-preferencesModal"><span></span>EDIT</a><span class="preferences_link_see preferences_hint"><span></span>SEE<div class="preferences_hint_info">
+                    <p class="preferences_hint_info_heading">Sublimation T-Shirt 2</p>
+                    <p>Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process_TEST</p>
+                  </div></span></div></td>
+                <td><div class="markup_field"><input type="text" placeholder="30">%</div></td>
+                <td><div class="checkbox_wrapper">
+                    <input type="checkbox" checked="checked" name="product_status" id="d10" class="standart_checkbox"/>
+                    <label for="d10"><i></i></label>
+                        </div></td>
+              </tr>
+            </table>
+          </div>
+          <div class="orders_board_pagination style_preferencesPagination">
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li class="disabled">
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">Previous</span>
+                  </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">...</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </section>
+  </div>
+
+  <!-- modal fades -->
+  <div class="modal_fades">
+    <div id="preferences_modal" title="Basic dialog">
+      <div class="preferences_modal_content">
+        <p class="preferences_modal_heading">Sublimation T-Shirt 2</p>
+        <div class="preferences_modal_field">
+          <span>Description</span>
+          <textarea rows="4" class="js-countLettersField" placeholder="Just Sub shirts are in AWDis' own Neoteric 175 gsm 100% Polyester Jersey fabric durable enough to do justice to a permanent printing process." maxlength="250"></textarea>
+          <div class="collection_count_letters_wrap">
+            <span><span class="collection_count_letters js-countLettersValue">0</span>/250</span>
+          </div>
+        </div>
+        <div class="confirmation_buttons js-closeModalButtons style_preferencesModalConfirm">
+            <button>CANCEL</button>
+            <button class="-is_active">SAVE CHANGES</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END modal fades -->
+
+  <script src="dist/jquery.min.js"></script>
+  <script src="jquery-ui/jquery-ui.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
