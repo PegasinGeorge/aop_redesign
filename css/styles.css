@@ -1953,6 +1953,11 @@ a.button__save:hover{
 	background-position: 0 50%;
 	color: #58666E;
 	font-size: 24px;
+	transition: all .3s ease-in-out;
+}
+
+.itemPrice:hover{
+	background-image: url('../img/price-hover.png');
 }
 
 .productColumn{
