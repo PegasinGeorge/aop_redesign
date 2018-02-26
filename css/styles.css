@@ -3127,7 +3127,8 @@ p.order_checkbox_heading {
   height: 14px;
   line-height: 0.9;
   font-size: 16px;
-  display: inline-block;
+	width: 180px;
+  /* display: inline-block; */
 }
 
 .collection_photo_add_image > ul > li .info{
