@@ -428,8 +428,14 @@ var elements = stripe.elements();
 function mobileMenu(){
 	$('body').on('click', '.mainMenu_toggle', function(){
 		$(this).toggleClass('active');
+		$('body').toggleClass('-style_fixed');
 		$('.mainMenu_list').toggleClass('active');
 		$('.js-mainContent').toggleClass('-mainMenu_active');
+		$('.js-mobileMenu_expandSub').removeAttr('data-toggle aria-haspopup aria-expanded');
+	});
+
+	$('body').on('click', '.js-mobileMenu_expandSub', function(){
+		$(this).parent().toggleClass('active');
 	});
 }
 
