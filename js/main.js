@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	customScrollbar();
+	ordersScrollbar();
 	selectedDays();
 	showStyleOfProduct();
 	openSubMenu();
@@ -21,8 +22,19 @@ $(document).ready(function() {
 function customScrollbar(){
 	if ($('.imageModelsList').length) {
 		$('.imageModelsList').mCustomScrollbar();
-	}
-}
+	};
+	// if ($('.mobileBoard').length) {
+	// 	$('.mobileBoard').mCustomScrollbar();
+	// };
+};
+function ordersScrollbar() {
+	if ($('.mobileBoard').length) {
+		$('.mobileBoard').mCustomScrollbar({
+			axis:"x",
+			mouseWheel:{ axis: "x" }
+		});
+	};
+};
 // End Scrollbar (edit product 2)
 
 /*Show days in dashboard*/
@@ -294,11 +306,9 @@ function activationModal() {
 	if ($( "#reprint_order_modal" ).length) {
 			$( "#reprint_order_modal" ).dialog({
 	    	autoOpen: false,
-	    	maxWidth: 572,
 	    	modal: true,
 	    	draggable: false,
 	    	resizable: false,
-	    	width: 572,
 	    	height: 478
 	    });
 	    $('body').on('click', '.js-reprintModal', function(e) {
