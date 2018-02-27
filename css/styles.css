@@ -4572,8 +4572,6 @@ span.preferences_hint:hover .preferences_hint_info {
 }
 
 @media all and (max-width: 700px) {
-
-	}
 	.collection_modal.-style-reprint-modal {
 		width: 300px !important;
 	}
