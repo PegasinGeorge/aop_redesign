@@ -570,7 +570,7 @@ a.chart_item:hover {
 	width: 100%;
 }
 .chart_item__content > div > img {
-    height: 206px; //delete in finish
+    height: 206px;
 }
 .style_appareal {
 	background-color: #F4F4F4;
@@ -3375,7 +3375,7 @@ a.heading_link {
 	text-align: center;
 }
 .card_information_filled {
-	display: none; //uncomment for show card values
+	display: none;
 }
 .card_information_filled .card_information_item > span {
 	color: #99A6AD;
@@ -3701,7 +3701,7 @@ a.change_card:hover span {
     border-radius: 2px;
     margin: 0 10px 0 -10px;
     font-size: 13px;
-} 
+}
 .preferences__heading_dropdowns .dashboard_show .show_days_quant {
     width: 165px;
     padding: 0 12px;
@@ -3993,7 +3993,7 @@ span.preferences_hint:hover .preferences_hint_info {
 		width: 100px;
 	}
 	.mobileBoard .mCustomScrollBox, .mobileBoard .mCSB_container {
-		overflow: visible !important; 
+		overflow: visible !important;
 	}
 }
 
@@ -4174,7 +4174,7 @@ span.preferences_hint:hover .preferences_hint_info {
 	}
 }
 
-	}
+@media all and (max-width: 900px){
 	.style_collection_item_wide{
 		width: 100%;
 	}
@@ -4251,7 +4251,7 @@ span.preferences_hint:hover .preferences_hint_info {
 	}
 	.orders_board__heading .showing_products {
 		margin: 15px 0 0 5px;
-	}	
+	}
 	a.order_id {
 		padding: 0 0 0 6px;
 	}
