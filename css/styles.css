@@ -1873,6 +1873,10 @@ a.button__save:hover{
 	display: flex;
 	margin: 0 -10px;
 }
+.row.-style_wider {
+    display: flex;
+    margin: 0 -10px;
+}
 
 .pageBlock{
 	background-color: #fff;
@@ -4174,7 +4178,31 @@ span.preferences_hint:hover .preferences_hint_info {
 	}
 }
 
-@media all and (max-width: 900px){
+@media all and (max-width: 940px){
+	.divider{
+		display: none;
+	}
+	.settingsColumn{
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+	}
+	.settingsBlock{
+		margin: 0 20px 20px 0;
+	}
+	.productSize{
+		width: 38px;
+    height: 38px;
+    line-height: 36px;
+    font-size: 16px;
+	}
+	.row.-style_wide{
+		flex-wrap: wrap;
+	}
+}
+
+@media all and (max-width: 900px) {
 	.style_collection_item_wide{
 		width: 100%;
 	}
@@ -4186,13 +4214,12 @@ span.preferences_hint:hover .preferences_hint_info {
 		-ms-flex-direction: column;
 		flex-direction: column;
 	}
-	.ready_publish_products > p{
-		margin: 0 0 10px;
-	}
 	.header_logo{
 		font-size: 16px;
 	}
-
+	.ready_publish_products > p{
+		display: none;
+	}
 	a.order_customer_mail {
 		display: none;
 	}
@@ -4239,12 +4266,10 @@ span.preferences_hint:hover .preferences_hint_info {
 	}
 	.orders_board__heading_dropdowns .dashboard_show .show_days_quant {
 		width: 165px;
+		padding: 0 5px;
 	}
 	.orders_board__content.style_orderPageBoard table tr th:nth-child(1) {
 		padding: 10px 5px 10px 15px;
-	}
-	.orders_board__heading_dropdowns .dashboard_show .show_days_quant {
-		padding: 0 5px;
 	}
 	.style_order_search input {
 		padding: 0 5px;
@@ -4257,7 +4282,7 @@ span.preferences_hint:hover .preferences_hint_info {
 	}
 }
 
-@media all and (max-width: 840px){
+@media all and (max-width: 840px) {
 	.mainMenu_item.active .dropdown-menu{
 		display: block;
 	}
@@ -4420,103 +4445,6 @@ span.preferences_hint:hover .preferences_hint_info {
 	}
 }
 
-@media all and (max-width: 940px){
-	.divider{
-		display: none;
-	}
-	.settingsColumn{
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		justify-content: space-between;
-	}
-	.settingsBlock{
-		margin: 0 20px 20px 0;
-	}
-	.productSize{
-		width: 38px;
-    height: 38px;
-    line-height: 36px;
-    font-size: 16px;
-	}
-	.row.-style_wide{
-		flex-wrap: wrap;
-	}
-}
-
-@media all and (max-width: 900px){
-
-	.style_collection_item_wide{
-		width: 100%;
-	}
-	.style_collection_item_standart{
-		width: 33.3333%;
-	}
-	.ready_publish_products{
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-	}
-	.ready_publish_products > p{
-		display: none;
-	}
-	.header_logo{
-		font-size: 16px;
-	}
-
-	a.order_customer_mail {
-		display: none;
-	}
-	a.order_customer_name {
-		padding: 0;
-		border: none;
-	}
-	span.profit_hint {
-		display: none;
-	}
-	span.profit_price {
-		padding: 0;
-		border: none;
-	}
-	a.order_reprint > span {
-		display: none;
-	}
-	.showing_products p span {
-		font-size: 18px;
-	}
-	.dashboard_show > span {
-		margin: 0 5px 0 0;
-	}
-	.orders_board__heading {
-		flex-direction: column;
-	}
-	.orders_board__heading_dropdowns {
-		flex-wrap: wrap;
-	}
-	.orders_board__heading_dropdowns .dashboard_show > span {
-		display: none;
-	}
-	.orders_board__heading_dropdowns .dashboard_show {
-		margin: 15px 15px 0 0;
-	}
-	.orders_board__heading_dropdowns .dashboard_show .show_days_quant {
-		width: 165px;
-	}
-	.orders_board__content table tr th {
-		padding: 10px 5px 10px 15px;
-	}
-	.orders_board__heading_dropdowns .dashboard_show .show_days_quant {
-		padding: 0 5px;
-	}
-	.style_order_search input {
-		padding: 0 5px;
-	}
-	.orders_board__heading .showing_products {
-		margin: 15px 0 0 0;
-	}
-}
-
-
 @media all and (max-width: 768px){
 	.chart_values__wrapper .chart_item.chart_item__narrow{
 		width: calc(50% - 10px);
@@ -4536,6 +4464,13 @@ span.preferences_hint:hover .preferences_hint_info {
 
 	.style_preferencesBoardWrapper {
 		overflow-x: hidden;
+	}
+	.settings_item__content_chart {
+		flex-direction: row;
+		padding: 30px 0 30px 0;
+	}
+	.paypal_button_wrapper {
+		margin: 15px auto;
 	}
 }
 
@@ -4580,6 +4515,9 @@ span.preferences_hint:hover .preferences_hint_info {
 	}
 	.reprint_modal_main {
 		margin: 20px 0 0 0;
+	}
+	.orders_board__heading .showing_products {
+		padding: 0 0 0 5px; 	
 	}
 	.orders_board__heading .showing_products, .showing_products p span {
 		font-size: 13px;
