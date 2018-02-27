@@ -46,7 +46,7 @@
 	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Collections</a></li>
 	            <li class="mainMenu_item"><a href="#" class="mainMenu_link active_page">Products</a></li>
 	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Orders</a></li>
-	            <li class="mainMenu_item"><a href="#" class="dropdown-toggle mainMenu_link js-mobileMenu_expandSub"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+	            <li class="mainMenu_item"><a href="#" class="dropdown-toggle mainMenu_link js-mobileMenu_expandSub -settings"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
 	              <ul class="dropdown-menu style_dropdown_country">
 	                <li><a class="mainMenu_link" href="#">Billing</a></li>
 	                <li><a class="mainMenu_link" href="#">Shipping</a></li>
@@ -90,8 +90,8 @@
   <section class="main js-mainContent">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 dashboard_heading">
-          <div class="dashboard_name">
+        <div class="col-xs-12 page_heading">
+          <div class="heading_name">
             <p>ORDERS</p>
             <span>All your orders appear here</span>
           </div>
@@ -140,14 +140,14 @@
               </div>
             </div>
           </div>
-          <div class="orders_board__content mobileBoard">
+          <div class="orders_board__content mobileBoard style_orderPageBoard">
             <table>
               <tr>
-                <th>Order ID <div class="orders_sorting"><a href="#"></a><a href="#"></a></div></th>
-                <th>Date <div class="orders_sorting"><a href="#"></a><a href="#"></a></div></th>
+                <th>Order ID <a class="orders_sorting"><i class="fa fa-sort-asc" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></a></th>
+                <th>Date <a class="orders_sorting"><i class="fa fa-sort-asc" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></a></th>
                 <th>Customer</th>
                 <th>Status</th>
-                <th>Your profit <div class="orders_sorting"><a href="#"></a><a href="#"></a></div></th>
+                <th>Your profit <a class="orders_sorting"><i class="fa fa-sort-asc" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></a></th>
                 <th>Reprint</th>
               </tr>
               <tr>
@@ -168,7 +168,7 @@
                     </ul>
                   </div>
                 </span><span class="profit_price">&dollar; 48</span></td>
-                <td><a href="#" class="order_reprint js-reprintModal"><span></span>REPRINT ORDER?</a></td>
+                <td><a href="#" class="order_reprint js-reprintModal"><span></span><p>REPRINT ORDER?</p></a></td>
               </tr>
               <tr>
                 <td><a href="#" class="order_id">#1026</a></td>
@@ -188,7 +188,7 @@
                     </ul>
                   </div>
                 </span><span class="profit_price">&dollar; 71</span></td>
-                <td><a href="#" class="order_reprint js-reprintModal"><span></span>REPRINT ORDER?</a></td>
+                <td><a href="#" class="order_reprint js-reprintModal"><span></span><p>REPRINT ORDER?</p></a></td>
               </tr>
               <tr>
                 <td><a href="#" class="order_id">#1025</a></td>
@@ -208,7 +208,7 @@
                     </ul>
                   </div>
                 </span><span class="profit_price">&dollar; 65</span></td>
-                <td><a href="#" class="order_reprint js-reprintModal"><span></span>REPRINT ORDER?</a></td>
+                <td><a href="#" class="order_reprint js-reprintModal"><span></span><p>REPRINT ORDER?</p></a></td>
               </tr>
               <tr>
                 <td><a href="#" class="order_id">#1024</a></td>
@@ -228,7 +228,7 @@
                     </ul>
                   </div>
                 </span><span class="profit_price">&dollar; 32</span></td>
-                <td><a href="#" class="order_reprint js-reprintModal"><span></span>REPRINT ORDER?</a></td>
+                <td><a href="#" class="order_reprint js-reprintModal"><span></span><p>REPRINT ORDER?</p></a></td>
               </tr>
               <tr>
                 <td><a href="#" class="order_id">#1023</a></td>
@@ -248,7 +248,7 @@
                     </ul>
                   </div>
                 </span><span class="profit_price">&dollar; 28</span></td>
-                <td><a href="#" class="order_reprint js-reprintModal"><span></span>REPRINT ORDER?</a></td>
+                <td><a href="#" class="order_reprint js-reprintModal"><span></span><p>REPRINT ORDER?</p></a></td>
               </tr>
             </table>
           </div>
@@ -257,7 +257,7 @@
               <ul class="pagination">
                 <li class="disabled">
                   <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">Previous</span>
+                    <span aria-hidden="true"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span>
                   </a>
                 </li>
                 <li class="active"><a href="#">1</a></li>
@@ -268,7 +268,7 @@
                 <li><a href="#">...</a></li>
                 <li>
                   <a href="#" aria-label="Next">
-                    <span aria-hidden="true">Next</span>
+                    <span aria-hidden="true"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
                   </a>
                 </li>
               </ul>

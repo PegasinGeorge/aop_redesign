@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,7 +46,7 @@
 	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Collections</a></li>
 	            <li class="mainMenu_item"><a href="#" class="mainMenu_link active_page">Products</a></li>
 	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Orders</a></li>
-	            <li class="mainMenu_item"><a href="#" class="dropdown-toggle mainMenu_link js-mobileMenu_expandSub"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+	            <li class="mainMenu_item"><a href="#" class="dropdown-toggle mainMenu_link js-mobileMenu_expandSub -settings"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
 	              <ul class="dropdown-menu style_dropdown_country">
 	                <li><a class="mainMenu_link" href="#">Billing</a></li>
 	                <li><a class="mainMenu_link" href="#">Shipping</a></li>
@@ -89,15 +90,15 @@
   <section class="main js-mainContent">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 dashboard_heading">
-          <div class="dashboard_name">
+        <div class="col-xs-12 page_heading">
+          <div class="heading_name">
             <p>BILLING</p>
             <span>Manage your billing preferences &amp; Information</span>
           </div>
         </div>
       </div>
       <div class="settings_page_content">
-        <div class="row -style_wider">
+        <div class="row -style_wider settings_items_wrapper">
           <div class="pageBlock col-xs-12 col-sm-4 settings_item">
             <div class="settings_item__heading">
               <div class="settings_item__heading_info">
@@ -201,38 +202,38 @@
           </div>
         </div>
         <div class="row -style_wider">
-          <div class="pageBlock col-xs-12 settings_item">
+          <div class="pageBlock col-xs-12 settings_item style_billingBoardWrapper">
             <div class="settings_item__heading">
               <div class="settings_item__heading_info">
                 <p>Payment history</p>
               </div>
             </div>
-            <div class="orders_board__content -style_wider_board">
+            <div class="orders_board__content mCustomScrollbar mobileBoard -style_wider_board">
             <table>
               <tr>
-                <th>Date <div class="orders_sorting"><a href="#"></a><a href="#"></a></div></th>
+                <th>Date <a class="orders_sorting"><i class="fa fa-sort-asc" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></a></th>
                 <th>Success</th>
                 <th>Provider</th>
                 <th>Authomatic</th>
-                <th>Amount <div class="orders_sorting"><a href="#"></a><a href="#"></a></div></th>
+                <th>Amount <a class="orders_sorting"><i class="fa fa-sort-asc" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></a></th>
                 <th>CSV</th>
                 <th>PDF</th>
               </tr>
               <tr>
                 <td><p class="order_time">Jan 31, 2018 7:21am</p></td>
-                <td><div class="order_status_items"><span>Yes</span></div></td>
-                <td><div class="order_status_items"><span>Stripe</span></div></td>
-                <td><div class="order_status_items"><span>No</span></div></td>
-                <td><span>&pound; 19.5</span></td>
+                <td><div class="order_status_items style_singleStatusItem"><span>Yes</span></div></td>
+                <td><div class="order_status_items style_singleStatusItem"><span>Stripe</span></div></td>
+                <td><div class="order_status_items style_singleStatusItem"><span>No</span></div></td>
+                <td><span class="amount_value">&pound; 19.5</span></td>
                 <td><a href="#" class="order_reprint" download>DOWNLOAD CSV</a></td>
                 <td><a href="#" class="order_reprint" download>DOWNLOAD PDF</a></td>
               </tr>
               <tr>
                 <td><p class="order_time">Dec 19, 2017 6:45am</p></td>
-                <td><div class="order_status_items"><span>Yes</span></div></td>
-                <td><div class="order_status_items"><span>Stripe</span></div></td>
-                <td><div class="order_status_items"><span>No</span></div></td>
-                <td><span>&pound; 12.7</span></td>
+                <td><div class="order_status_items style_singleStatusItem"><span>Yes</span></div></td>
+                <td><div class="order_status_items style_singleStatusItem"><span>Stripe</span></div></td>
+                <td><div class="order_status_items style_singleStatusItem"><span>No</span></div></td>
+                <td><span class="amount_value">&pound; 12.7</span></td>
                 <td><a href="#" class="order_reprint" download>DOWNLOAD CSV</a></td>
                 <td><a href="#" class="order_reprint" download>DOWNLOAD PDF</a></td>
               </tr>
@@ -250,6 +251,7 @@
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script async src="https://static.addtoany.com/menu/page.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

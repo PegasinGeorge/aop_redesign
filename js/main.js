@@ -23,15 +23,11 @@ function customScrollbar(){
 	if ($('.imageModelsList').length) {
 		$('.imageModelsList').mCustomScrollbar();
 	};
-	// if ($('.mobileBoard').length) {
-	// 	$('.mobileBoard').mCustomScrollbar();
-	// };
 };
 function ordersScrollbar() {
 	if ($('.mobileBoard').length) {
 		$('.mobileBoard').mCustomScrollbar({
 			axis:"x",
-			mouseWheel:{ axis: "x" }
 		});
 	};
 };
