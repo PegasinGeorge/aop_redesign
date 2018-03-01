@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="jquery-ui/jquery-ui.min.css" rel="stylesheet">
+  <link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet">
+  <link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<title>All Over Print</title>
+</head>
+<body class="dashboard">
+  <div class="content_wrapper">
+  <div class="header-bottom">
+    <div class="container header_bottom_bar_wrapper">
+      <div class="row mainMenu__wrapper">
+        <a href="/" class="header_logo"><img alt="logo" src="./img/logo.png" class="img-responsive">All Over Print</a>
+      </div>
+    </div>
+  </div>
+  <header class="page_header">
+     <div class="header_top">
+       <div class="container header_top_bar_wrapper">
+        <div class="mainNavigation_wrapper">
+	        <div class="header_menu_wrapper mainMenu">
+						<a href="#" class="mainMenu_toggle">
+							<span class="mMt one"></span>
+							<span class="mMt two"></span>
+							<span class="mMt three"></span>
+							<span class="mMt four"></span>
+						</a>
+	          <ul class="mainMenu_list">
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link -dashboard">Dashboard</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Collections</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link active_page">Products</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Orders</a></li>
+	            <li class="mainMenu_item"><a href="#" class="mainMenu_link">Settings</a></li>
+	          </ul>
+	        </div>
+         <div class="header_top_bar">
+           <div class="dropdown orders_top_dropdown">
+              <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="sprites top_bell"></span><span class="value">2</span></a>
+              <div class="dropdown-menu style_list_notifications style_dropdown" aria-labelledby="dropdownMenu1">
+                <p class="value_notifications">You have 2 notifications</p>
+                <ul class="style_dropdown">
+                  <li>
+                    <a href="#"></a>
+                      <span class="order_picture" style="background-image: url('./img/product.png');"></span>
+                      <p>New colors for <span> <a href="#">Tote bag</a> </span>are been added! <span class="addition_date">6 hours ago</span></p>
+                  </li>
+                  <li><a href="#"></a><p><span><a href="#">Kids T-shirt</a></span> is the most popular this month <span class="addition_date">2 days ago</span></p></li>
+                  <li class="see_all_notifications"><a href="#"></a>See all notifications</li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown user_top_dropdown">
+              <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="user_name">Oduvan4ik Admin</span><span class="caret"></span><div class="user_photo user_online"><div class="user_photo_wrapper" style="background-image: url('./img/user.png');"></div></div>
+              </a>
+              <ul class="dropdown-menu style_dropdown" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Logout<i class="sprites"></i></a></li>
+              </ul>
+            </div>
+         </div>
+        </div>
+       </div>
+     </div>
+  </header>
+  <section class="main js-mainContent">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 page_heading">
+          <div class="heading_name">
+            <p>Dashboard</p>
+            <span>Welcome to All Over Print store!</span>
+          </div>
+          <div class="dashboard_show">
+            <span>Show</span>
+            <div class="btn-group">
+              <span class="show_days_quant style-text_center js-selectedLastDays"></span>
+              <button class="btn show_days_caret dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu style_dropdown_country js-selectedDay">
+                <li><a href="#">Last 5 days</a></li>
+                <li><a href="#">Last 10 days</a></li>
+                <li><a href="#">Last 20 days</a></li>
+                <li><a href="#">Last 30 days</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard_content">
+        <div class="row -style_wider chart_items__wrapper">
+          <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 chart_values__wrapper">
+            <a href="#" class="chart_item chart_item__narrow chart_item__value style_number_orders">
+              <p>2</p>
+              <span>Number of orders</span>
+            </a>
+            <div class="chart_item chart_item__narrow chart_item__value style_revenue">
+              <p><span>&pound;</span>3.98</p>
+              <span>Revenue</span>
+            </div>
+            <div class="chart_item chart_item__value style_average_value">
+              <div class="little_chart_wrapper"><img alt="img" src="./img/circle-chart.png" class="img-responsive"></div>
+              <!-- <div class="chart_item__wide_values"> -->
+                <p><span>&pound;</span>1.99</p>
+                <span>Average Order Value</span>
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+            <div class="chart_item chart_item_standart">
+              <div class="chart_item__heading">
+                <div class="chart_item__heading_info style_heading_revenue">
+                  <p>Revenue - &pound;</p>
+                  <span>(11/30/2017 - 12/20/2017)</span>
+                </div>
+                <div class="chart_item__heading_buttons">
+                  <ul role="tablist">
+                    <li class="active"><a href=".revenue_tab_day" role="tab" data-toggle="tab" aria-controls="revenue_tab_day">Day</a></li>
+                    <li><a href=".revenue_tab_week" role="tab" data-toggle="tab" aria-controls="revenue_tab_week">Week</a></li>
+                    <li><a href=".revenue_tab_month" role="tab" data-toggle="tab" aria-controls="revenue_tab_month">Month</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chart_item__content tab-content">
+                <div class="tab-pane active revenue_tab_day" role="tabpanel">
+                  <img alt="img" src="./img/chart-1.png" class="img-responsive">
+                </div>
+                <div class="tab-pane revenue_tab_week" role="tabpanel">
+                  <img alt="img" src="./img/chart-2.png" class="img-responsive">
+                </div>
+                <div class="tab-pane revenue_tab_month" role="tabpanel">
+                  <img alt="img" src="./img/chart-3.png" class="img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row -style_wider chart_items__wrapper">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="chart_item chart_item_standart">
+              <div class="chart_item__heading">
+                <div class="chart_item__heading_info">
+                  <p>Reprint percentage - %</p>
+                </div>
+                <div class="chart_item__heading_buttons">
+                  <ul role="tablist">
+                    <li class="active"><a href=".reprint_tab_week" role="tab" data-toggle="tab" aria-controls="reprint_tab_week">Week</a></li>
+                    <li><a href=".reprint_tab_month" role="tab" data-toggle="tab" aria-controls="reprint_tab_month">Month</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chart_item__content tab-content">
+                <div class="tab-pane active reprint_tab_week" role="tabpanel">
+                  <img alt="img" src="./img/chart-2.png" class="img-responsive">
+                </div>
+                <div class="tab-pane reprint_tab_month" role="tabpanel">
+                  <img alt="img" src="./img/chart-1.png" class="img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="chart_item chart_item_standart">
+              <div class="chart_item__heading">
+                <div class="chart_item__heading_info">
+                  <p>Refund percentage - %</p>
+                </div>
+                <div class="chart_item__heading_buttons">
+                  <ul role="tablist">
+                    <li class="active"><a href=".refund_tab_week" role="tab" data-toggle="tab" aria-controls="refund_tab_week">Week</a></li>
+                    <li><a href=".refund_tab_month" role="tab" data-toggle="tab" aria-controls="refund_tab_month">Month</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chart_item__content tab-content">
+                <div class="tab-pane active refund_tab_week" role="tabpanel">
+                  <img alt="img" src="./img/chart-3.png" class="img-responsive">
+                </div>
+                <div class="tab-pane refund_tab_month" role="tabpanel">
+                  <img alt="img" src="./img/chart-2.png" class="img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row -style_wider chart_items__wrapper">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="chart_item chart_item_standart">
+              <div class="chart_item__heading">
+                <div class="chart_item__heading_info">
+                  <p>Snipped Jobs</p>
+                </div>
+                <div class="chart_item__heading_buttons">
+                  <ul role="tablist">
+                    <li class="active"><a href=".snipped_jobs_day" role="tab" data-toggle="tab" aria-controls="snipped_jobs_day">Day</a></li>
+                    <li><a href=".snipped_jobs_week" role="tab" data-toggle="tab" aria-controls="snipped_jobs_week">Week</a></li>
+                    <li><a href=".snipped_jobs_month" role="tab" data-toggle="tab" aria-controls="snipped_jobs_month">Month</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chart_item__content tab-content">
+                <div class="tab-pane active snipped_jobs_day" role="tabpanel">
+                  <img alt="img" src="./img/chart-4.png" class="img-responsive">
+                </div>
+                <div class="tab-pane snipped_jobs_week" role="tabpanel">
+                  <img alt="img" src="./img/chart-3.png" class="img-responsive">
+                </div>
+                <div class="tab-pane snipped_jobs_month" role="tabpanel">
+                  <img alt="img" src="./img/chart-2.png" class="img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row -style_wider chart_items__wrapper">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="chart_item chart_item_standart dubble-chart_items__wrapper">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <div class="chart_item__heading">
+                    <div class="chart_item__heading_info">
+                      <p>Products categories</p>
+                    </div>
+                    <div class="chart_item__heading_buttons">
+                      <ul role="tablist">
+                        <li class="active"><a href=".product_categories_week" role="tab" data-toggle="tab" aria-controls="product_categories_week">Week</a></li>
+                        <li><a href=".product_categories_month" role="tab" data-toggle="tab" aria-controls="product_categories_month">Month</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="chart_item__content tab-content">
+                    <div class="tab-pane active product_categories_week" role="tabpanel">
+                      <img alt="img" src="./img/chart-5.png" class="img-responsive">
+                    </div>
+                    <div class="tab-pane product_categories_month" role="tabpanel">
+                      <img alt="img" src="./img/chart-2.png" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 style_appareal">
+                  <div class="chart_item__heading">
+                    <div class="chart_item__heading_info">
+                      <p>Appareal</p>
+                    </div>
+                  </div>
+                  <div class="chart_item__content">
+                    <table class="chart_item__table">
+                      <tr>
+                        <th>Top 5 sellers</th>
+                        <th>Units</th>
+                        <th>Percentage</th>
+                      </tr>
+                      <tr>
+                        <td>1 - <a href="#">Sublimation T-shirt</a></td>
+                        <td>12</td>
+                        <td>42%</td>
+                      </tr>
+                      <tr>
+                        <td>2 - <a href="#">Unisex Fine Jersey T-shirt</a></td>
+                        <td>7</td>
+                        <td>21%</td>
+                      </tr>
+                      <tr>
+                        <td>3 - <a href="#">Sublimation vest</a></td>
+                        <td>5</td>
+                        <td>15%</td>
+                      </tr>
+                      <tr>
+                        <td>4 - <a href="#">Unisex Fine Jersey T-shirt</a></td>
+                        <td>4</td>
+                        <td>12%</td>
+                      </tr>
+                      <tr>
+                        <td>4 - <a href="#">Womens Unisex Fine Jersey T-shirt</a></td>
+                        <td>3</td>
+                        <td>10%</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row -style_wider chart_items__wrapper">
+          <div class="col-lg-md-5 col-md-5 col-sm-12 col-xs-12">
+            <div class="chart_item chart_item_standart">
+              <div class="chart_item__heading">
+                <div class="chart_item__heading_info">
+                  <p>Countries</p>
+                </div>
+              </div>
+              <div class="chart_item__content">
+                <table class="chart_item__table">
+                      <tr>
+                        <th>Top 5 Destinations</th>
+                        <th>Units</th>
+                        <th>Percentage</th>
+                      </tr>
+                      <tr>
+                        <td><img alt="img" src="./img/flag-gb.png" class="img-responsive">1 - United Kingdom</td>
+                        <td>12</td>
+                        <td>42%</td>
+                      </tr>
+                      <tr>
+                        <td><img alt="img" src="./img/flag-gb.png" class="img-responsive">2 - France</td>
+                        <td>7</td>
+                        <td>21%</td>
+                      </tr>
+                      <tr>
+                        <td><img alt="img" src="./img/flag-gb.png" class="img-responsive">3 - Spain</td>
+                        <td>5</td>
+                        <td>15%</td>
+                      </tr>
+                      <tr>
+                        <td><img alt="img" src="./img/flag-gb.png" class="img-responsive">4 - Italy</td>
+                        <td>4</td>
+                        <td>12%</td>
+                      </tr>
+                      <tr>
+                        <td><img alt="img" src="./img/flag-gb.png" class="img-responsive">4 - Portugal</td>
+                        <td>3</td>
+                        <td>10%</td>
+                      </tr>
+                    </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-md-7 col-md-7 col-sm-12 col-xs-12">
+            <div class="chart_item chart_item_standart">
+              <div class="chart_item__heading">
+                <div class="chart_item__heading_info">
+                  <p>Orders</p>
+                </div>
+                <div class="chart_item__heading_buttons">
+                  <ul role="tablist">
+                    <li class="active"><a href=".orders_tab_day" role="tab" data-toggle="tab" aria-controls="orders_tab_day">Day</a></li>
+                    <li><a href=".orders_tab_week" role="tab" data-toggle="tab" aria-controls="orders_tab_week">Week</a></li>
+                    <li><a href=".orders_tab_month" role="tab" data-toggle="tab" aria-controls="orders_tab_month">Month</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chart_item__content tab-content">
+                <div class="tab-pane active orders_tab_day" role="tabpanel">
+                  <img alt="img" src="./img/chart-6.png" class="img-responsive">
+                </div>
+                <div class="tab-pane orders_tab_week" role="tabpanel">
+                  <img alt="img" src="./img/chart-3.png" class="img-responsive">
+                </div>
+                <div class="tab-pane orders_tab_month" role="tabpanel">
+                  <img alt="img" src="./img/chart-2.png" class="img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <script src="dist/jquery.min.js"></script>
+  <script src="jquery-ui/jquery-ui.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

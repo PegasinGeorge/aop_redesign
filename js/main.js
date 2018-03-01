@@ -369,6 +369,7 @@ function countLetters() {
 /*End Count letters*/
 
 /*Stripe activation*/
+if ( $(".billing_card").length ) {
 (function() {
 var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
 
@@ -431,6 +432,9 @@ var elements = stripe.elements();
 	  });
 	});
 })();
+}
+
+
 function mobileMenu(){
 	$('body').on('click', '.mainMenu_toggle', function(){
 		$(this).toggleClass('active');
