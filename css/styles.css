@@ -3716,6 +3716,7 @@ a.change_card:hover span {
 	font-weight: 600;
 	float: left;
 	border: 2px solid transparent;
+	background-color: transparent;
     padding: 5px 8px;
     border-radius: 2px;
     margin: 0 10px 0 -10px;
@@ -3879,6 +3880,7 @@ span.preferences_hint:hover .preferences_hint_info {
 .markup_field input {
 	width: 70px;
 	border: 2px solid #F3F2EE;
+	background-color: transparent;
 	padding: 6px 13px;
 	margin: 0 7px 0 0;
 	font-size: 13px;
@@ -4930,10 +4932,11 @@ span.preferences_hint:hover .preferences_hint_info {
 		font-size: 0
 		;
 	}
-	.style_list_notifications {
-		position: fixed;
-		top: 120px;
-		right: 10px;
+	.orders_top_dropdown {
+		position: initial;
+	}
+	.header_top_bar {
+		position: relative;
 	}
 	.change_style_list_buttons {
 		display: none;
