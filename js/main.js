@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	customScrollbar();
 	ordersScrollbar();
+	chartTableScrollbar();
 	selectedDays();
 	showStyleOfProduct();
 	openSubMenu();
@@ -27,6 +28,13 @@ function customScrollbar(){
 function ordersScrollbar() {
 	if ($('.mobileBoard').length) {
 		$('.mobileBoard').mCustomScrollbar({
+			axis:"x",
+		});
+	};
+};
+function chartTableScrollbar() {
+	if ($('.js-chartTableScroll').length) {
+		$('.js-chartTableScroll').mCustomScrollbar({
 			axis:"x",
 		});
 	};
@@ -113,7 +121,13 @@ function styleProductsList() {
 		$(this).parent().siblings().find('a').removeClass('-is-active');
 		$('.products_items_wrapper').addClass('-style_products_items_horisontal').removeClass('-style_products_items_columns');
 	});
+	if ($(window).width() <= 450) {
+		$('.products_items_wrapper').addClass('-style_products_items_columns').removeClass('-style_products_items_horisontal');
+	};
 }
+$(window).resize(function() {
+	styleProductsList();
+});
 /*END Style products list*/
 
 /*Disable product*/
