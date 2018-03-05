@@ -14,7 +14,8 @@ $(document).ready(function() {
 	countLetters();
 	reasonReprint();
 	selectCheckboxes();
-
+	profitHintModal();
+	preferencesHintModal();
 	mobileMenu();
 	mobileFilters();
 });
@@ -292,6 +293,42 @@ function activationModal() {
 		$( '.ui-dialog-titlebar-close' ).html('');
 	};
 
+	if ($( "#profitHintModal" ).length) {
+			$( "#profitHintModal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 300,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 300,
+	    	height: 478
+	    });
+	    $('body').on('click', '.js-profitHint', function(e) {
+	    	e.preventDefault();
+		  $( "#profitHintModal" ).dialog( "open" );
+		});
+		$( '#profitHintModal' ).parents('.ui-dialog').addClass( 'collection_modal' );
+		$( '.ui-dialog-titlebar-close' ).html('');
+	};
+
+	if ($( "#preferencesHintModal" ).length) {
+			$( "#preferencesHintModal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 300,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 300,
+	    	height: 478
+	    });
+	    $('body').on('click', '.js-preferencesHint', function(e) {
+	    	e.preventDefault();
+		  $( "#preferencesHintModal" ).dialog( "open" );
+		});
+		$( '#preferencesHintModal' ).parents('.ui-dialog').addClass( 'collection_modal' );
+		$( '.ui-dialog-titlebar-close' ).html('');
+	};
+
 	if ($( "#preferences_modal" ).length) {
 			$( "#preferences_modal" ).dialog({
 	    	autoOpen: false,
@@ -330,6 +367,32 @@ function activationModal() {
 	};
 };
 /*END Modal generation*/
+
+/*Profit hint mobile popup*/
+function profitHintModal() {
+	if($(window).width() < 900) {
+		$('.profit_hint').addClass('js-profitHint');
+	} else {
+		$('.profit_hint').removeClass('js-profitHint');
+	}
+}
+$(window).resize(function() {
+	profitHintModal();
+});
+/*END Profit hint mobile popup*/
+
+/*Preferences hint mobile popup*/
+function preferencesHintModal() {
+	if($(window).width() < 900) {
+		$('.preferences_hint').addClass('js-preferencesHint');
+	} else {
+		$('.preferences_hint').removeClass('js-preferencesHint');
+	}
+}
+$(window).resize(function() {
+	preferencesHintModal();
+});
+/*END Preferences hint mobile popup*/
 
 /*Disable social fields*/
 function disableSocialFields() {
