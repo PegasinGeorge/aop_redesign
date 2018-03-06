@@ -253,7 +253,7 @@ function activationModal() {
 		$('body').on('click', '.ui-widget.confirmation_modal .ui-dialog-content input', function(e) {
 			$('#price_variants').dialog( "close" );
 		});
-		$('.ui-dialog').eq(1).addClass('confirmation_modal');
+		$( '#price_variants' ).parents('.ui-dialog').addClass( 'collection_modal -style_priceVariantsModal' );
 		$('.ui-dialog').addClass('collection_modal');
 	};
 
@@ -370,7 +370,7 @@ function activationModal() {
 
 /*Profit hint mobile popup*/
 function profitHintModal() {
-	if($(window).width() < 900) {
+	if($(window).width() < 902) {
 		$('.profit_hint').addClass('js-profitHint');
 	} else {
 		$('.profit_hint').removeClass('js-profitHint');
@@ -383,7 +383,7 @@ $(window).resize(function() {
 
 /*Preferences hint mobile popup*/
 function preferencesHintModal() {
-	if($(window).width() < 900) {
+	if($(window).width() < 902) {
 		$('.preferences_hint').addClass('js-preferencesHint');
 	} else {
 		$('.preferences_hint').removeClass('js-preferencesHint');
