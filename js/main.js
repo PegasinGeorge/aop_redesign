@@ -18,6 +18,7 @@ $(document).ready(function() {
 	preferencesHintModal();
 	mobileMenu();
 	mobileFilters();
+	welcomePageSteps();
 });
 
 // Scrollbar (edit product 2)
@@ -510,6 +511,21 @@ var elements = stripe.elements();
 	});
 })();
 }
+
+/*Welcome-page steps*/
+function welcomePageSteps() {
+	jQuery('body').on('click', '.js-stepsLinks a', function(e){
+	    e.preventDefault();
+		var tabIndex = $(this).parent().index();
+
+		$(this).parent().siblings().removeClass('-is-active');
+		$(this).parent().addClass('-is-active');
+
+		$(this).parents('.main_welcome_page').find('.welcome_page_stepsWrapper').children().eq(tabIndex).siblings().removeClass('-in-active-step');
+		$(this).parents('.main_welcome_page').find('.welcome_page_stepsWrapper').children().eq(tabIndex).addClass('-in-active-step');
+	});
+}
+/*END Welcome-page steps*/
 
 
 function mobileMenu(){
