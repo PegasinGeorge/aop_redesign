@@ -656,7 +656,7 @@ a.chart_item:hover {
     width: 188px;
     text-align: center;
     line-height: 2.6;
-    border-radius: 4px;
+    border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
 .ready_publish_products a:hover {
@@ -792,7 +792,7 @@ a.chart_item:hover {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	border-radius: 4px;
+	border-radius: 3px;
 }
 .style-product_heading_item {
 	width: 100%;
@@ -852,7 +852,7 @@ a.chart_item:hover {
 	display: inline-block;
 	background-size: cover;
     background-position: 50%;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 .product_collection_content ul > li > a.-is-active {
 	-webkit-box-shadow: inset 0px 0px 0px 2px rgba(35,183,229,1);
@@ -1017,7 +1017,7 @@ a.chart_item:hover {
 .change_style_list_buttons ul li a {
 	width: 35px;
 	height: 35px;
-	border-radius: 4px;
+	border-radius: 3px;
 	border: 1px solid #E4E5E5;
 	display: flex;
 	justify-content: center;
@@ -1198,7 +1198,7 @@ a.chart_item:hover {
 	display: inline-block;
     width: 163px;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 3px;
     padding: 7px;
     left: 1%;
     z-index: 100;
@@ -1251,7 +1251,7 @@ a.chart_item:hover {
 	display: inline-block;
 	cursor: pointer;
 	width: 100%;
-	border-radius: 4px;
+	border-radius: 3px;
 	background-color: #23B7E5;
 	transition: all 0.3s ease-in-out;
 	text-align: center;
@@ -1365,7 +1365,7 @@ a.chart_item:hover {
 	position: relative;
 	width: 34.5%;
 	height: 208px;
-	border-radius: 4px;
+	border-radius: 3px;
 	border: 1px solid #F3F2EE;
 }
 .collection_modal_thumbnail > a {
@@ -1452,7 +1452,7 @@ a.chart_item:hover {
 	font-weight: 400;
 	color: #99A6AD;
 	border: 1px solid #DDDDDD;
-	border-radius: 4px;
+	border-radius: 3px;
 	width: 80px;
     height: 30px;
     margin: 0 5px;
@@ -3555,7 +3555,7 @@ a.change_card:hover span {
 	height: 35px;
 	background: #9B9DB2;
 	border:none;
-	border-radius: 4px;
+	border-radius: 3px;
 	color: #fff;
 	font-size: 11px;
 	-ms-text-align-last: auto;
@@ -3604,7 +3604,7 @@ a.change_card:hover span {
 	height: 35px;
 	border: none;
 	background-color: #FFC439;
-    border-radius: 4px;
+    border-radius: 3px;
     text-align: left;
     font-size: 11px;
     padding: 0 48px;
@@ -4056,6 +4056,47 @@ a.preferences_hint:hover .preferences_hint_info {
 	max-width: 1150px;
   padding: 0 15px;
 	position: relative;
+}
+
+.page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 999999999;
+}
+.loader-parent {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: calc(50% - 50px);
+	left: calc(50% - 50px);
+	background-image: url("../img/shirt-use.png");
+}
+.loader-parent img {
+	position: absolute;
+	left: calc(50% - 21px);
+	top: calc(50% - 21px);
+	-webkit-animation: preloadermove 1s infinite linear; /* Safari 4.0 - 8.0 */
+    animation: preloadermove 1s infinite linear;
+}
+@-webkit-keyframes preloadermove {
+    from {
+      transform: rotate(-360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}
+@keyframes preloadermove {
+    from {
+      transform: rotate(-360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
 }
 /* Responsive */
 @media all and (min-width: 1200px) {
@@ -4644,6 +4685,11 @@ a.preferences_hint:hover .preferences_hint_info {
 	}
 	.imageColours {
 		padding: 0 30px 0 0;
+	}
+}
+@media all and (max-width: 767px) {
+	.profile_item.-style_general_settings {
+		margin: 0 0 30px 0;
 	}
 }
 
