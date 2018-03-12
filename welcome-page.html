@@ -21,8 +21,14 @@
 	<title>Welcome</title>
 </head>
 <body>
+  <div class="page-preloader">
+    <div class="loader-parent">
+      <img alt="img" src="./img/loading.png">
+    </div>
+  </div>
   <div class="content_wrapper">
     <section class="main main_welcome_page">
+      <a href="#" class="welcome_page_nextStep js-welcomeNextStep"></a>
       <div class="welcome_page_stepsWrapper">
         <div class="welcome_page_step -style-stepOne -in-active-step">
           <div class="step_description -style-stepOneDescription">
@@ -50,9 +56,9 @@
       </div>
       <div class="welcome_page_menuWrapper">
         <ul class="welcome_page_menu js-stepsLinks">
-          <li class="-is-active"><a href="#"><h6 class="welcome_menuHeading">STEP 1</h6><span class="welcome_menuDescription">Select image</span></a></li>
-          <li><a href="#"><h6 class="welcome_menuHeading">STEP 2</h6><span class="welcome_menuDescription">Customize products</span></a></li>
-          <li><a href="#"><h6 class="welcome_menuHeading">STEP 3</h6><span class="welcome_menuDescription">Publish products</span></a></li>
+          <li class="-is-active"><a href="#"><span class="welcome_menuDescription"><span>1 - Select</span> image</span></a></li>
+          <li><a href="#"><span class="welcome_menuDescription"><span>2 - Customize</span> products</span></a></li>
+          <li><a href="#"><span class="welcome_menuDescription"><span>3 - Publish</span> products</span></a></li>
         </ul>
       </div>
     </section>

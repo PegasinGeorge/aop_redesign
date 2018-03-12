@@ -389,8 +389,8 @@ input, select, textarea, button {
 .show_days_quant {
 	background-color: #fff;
 	border: 1px solid #E6E8E8;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 	font-size: 13px;
 	color: #58666E;
 	width: 108px;
@@ -413,6 +413,8 @@ input, select, textarea, button {
     padding: 5px;
     text-align: center;
     height: 35px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .show_days_caret:hover, .show_days_caret:focus {
 	background-color: #2f99b9;
@@ -891,8 +893,8 @@ a.chart_item:hover {
 .show_styles {
 	background-color: #fff;
     border: 1px solid #E6E8E8;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     font-size: 13px;
     color: #58666E;
     width: 88%;
@@ -997,8 +999,8 @@ a.chart_item:hover {
 	float: left;
 	background-color: #fff;
     border: 1px solid #E6E8E8;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     color: #58666E;
     height: 35px;
     padding: 0 15px;
@@ -4062,6 +4064,7 @@ a.preferences_hint:hover .preferences_hint_info {
 .main.main_welcome_page {
 	height: 100vh;
 	padding: 0;
+	position: relative;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -4071,8 +4074,23 @@ a.preferences_hint:hover .preferences_hint_info {
 	justify-content: space-between;
 }
 .welcome_page_stepsWrapper {
-	height: calc(100% - 100px);
+	height: calc(100% - 55px);
 	position: relative;
+}
+.welcome_page_nextStep {
+	position: absolute;
+	right: 85px;
+	top: 70px;
+	width: 42px;
+	height: 30px;
+	background-image: url("../img/next-step.png");
+	transition: all 0.3s ease-in-out;
+	z-index: 3;
+	opacity: 1;
+}
+.welcome_page_nextStep.-style-nextStepHidden {
+	opacity: 0;
+	z-index: -1;
 }
 .welcome_page_step {
 	position: absolute;
@@ -4156,13 +4174,15 @@ a.preferences_hint:hover .preferences_hint_info {
 }
 .welcome_page_step.-style-stepTwo {
 	background-image: url("../img/step-two.jpg");
+	background-position: 60% 50%;
 }
 .welcome_page_step.-style-stepThree {
 	background-image: url("../img/step-three.jpg");
+	background-position: 40% 50%;
 }
 .welcome_page_menuWrapper {
 	width: 100%;
-	height: 100px;
+	height: 55px;
 	background-color: #7266BA;
 }
 ul.welcome_page_menu {
@@ -4171,17 +4191,12 @@ ul.welcome_page_menu {
 	height: 100%;
 }
 ul.welcome_page_menu li {
-	width: 33%;
+	width: 33.33%;
 	float: left;
 	height: 100%;
 	position: relative;
 	background-color: #625893;
 	transition: all 0.3s ease-in-out;
-}
-ul.welcome_page_menu li:hover {
-	-webkit-box-shadow: inset 0px 0px 26px 1px rgba(83,73,134,1);
--moz-box-shadow: inset 0px 0px 26px 1px rgba(83,73,134,1);
-box-shadow: inset 0px 0px 26px 1px rgba(83,73,134,1);
 }
 ul.welcome_page_menu li a {
 	position: absolute;
@@ -4189,18 +4204,11 @@ ul.welcome_page_menu li a {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	text-align: center;
+	line-height: 55px;
 }
 ul.welcome_page_menu li:not(:first-child) a:before {
-	content: "\f054";
-	font-family: "FontAwesome";
+	content: "";
 	position: absolute;
 	left: -15px;
 	width: 30px;
@@ -4208,29 +4216,23 @@ ul.welcome_page_menu li:not(:first-child) a:before {
 	background-color: #fff;
 	top: calc(50% - 15px);
 	border-radius: 50%;
-	color: #625893;
 	line-height: 30px;
-	font-size: 14px;
     text-align: center;
     transition: all 0.3s ease-in-out;
     -webkit-box-shadow: 0px 0px 5px 1px rgba(83,73,134,1);
 	-moz-box-shadow: 0px 0px 5px 1px rgba(83,73,134,1);
 	box-shadow: 0px 0px 5px 1px rgba(83,73,134,1);
 }
-ul.welcome_page_menu li a:hover:before {
-	-webkit-box-shadow: 0px 0px 26px 1px rgba(83,73,134,1);
-	-moz-box-shadow: 0px 0px 26px 1px rgba(83,73,134,1);
-	box-shadow: 0px 0px 26px 1px rgba(83,73,134,1);
+ul.welcome_page_menu li:not(:first-child) a:after {
+	content: "\f054";
+	font-family: "FontAwesome";
+	position: absolute;
 	font-size: 15px;
-}
-ul.welcome_page_menu li:not(:first-child).-is-active a:before {
-	content: "\f00c";
-}
-h6.welcome_menuHeading {
-	color: #fff;
-	font-weight: 600;
-    font-size: 18px;
-    transition: all 0.3s ease-in-out;
+	top: 1px;
+    left: -7px;
+	color: #625893;
+	width: 15px;
+	height: 15px;
 }
 span.welcome_menuDescription {
 	color: #fff;
@@ -4241,17 +4243,100 @@ span.welcome_menuDescription {
 }
 ul.welcome_page_menu li.-is-active {
 	background: #fff;
-	-webkit-box-shadow: inset 0px 0px 26px 1px rgba(114,102,186,1);
-	-moz-box-shadow: inset 0px 0px 26px 1px rgba(114,102,186,1);
-	box-shadow: inset 0px 0px 26px 1px rgba(114,102,186,1);
-}
-ul.welcome_page_menu li.-is-active h6.welcome_menuHeading {
-	color: #7266BA; 
 }
 ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	color: #7266BA; 
 }
 /*END welcome page*/
+
+/*Publishing products*/
+/*.-style-publishPage .mainMenu_list:not(.active) {
+	height: auto;
+}*/
+.-style-publishPage .mainMenu_list.active {
+	height: calc(100vh - 122px);
+}
+.main_publishing_products {
+	background-image: url("../img/bg-publish.jpg");
+	background-size: cover;
+	min-height: calc(100vh - 122px);
+	width: 100%;
+	background-position: 60% 0%;
+	position: relative;
+}
+.publishing_products_loader {
+	position: absolute;
+	top: 20%;
+    left: 16.5%;
+	width: 320px;
+}
+.publishing_products_circle {
+	width: 300px;
+	height: 300px;
+	background-image: url("../img/downloading-circle.png");
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.publishing_products_description {
+	margin: 40px 0 0 0;
+}
+.publishing_products_description p {
+	text-align: center;
+	color: #fff;
+	font-size: 17px;
+    font-weight: 600;
+}
+/*Publish finished page*/
+.main_publish_finished {
+	width: 100%;
+	position: relative;
+	min-height: calc(100vh - 122px);
+	background-size: cover;
+	background-image: url("../img/bg-final.jpg");
+}
+.publish_finished_description {
+	position: absolute;
+	top: calc(50% - 122px);
+	width: 480px;
+    right: 20%;
+}
+.publish_finished_descriptionTop {
+	background: rgba(255, 255, 255, .9);
+    margin: 10px;
+    border-radius: 3px;
+    padding: 35px 30px 50px 30px;
+    text-align: center;
+    -webkit-box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
+}
+.publish_finished_descriptionTop h3 {
+	color: #7266BA;
+	font-weight: 700;
+}
+.publish_finished_descriptionTop p {
+	color: #99A6AD;
+	margin: 25px 0 0 0;
+	font-size: 14px;
+}
+.publish_finished_descriptionBottom {
+	text-align: center;
+}
+.publish_finished_descriptionBottom a {
+	color: #fff;
+	border-radius: 3px;
+	transition: all 0.3s ease-in-out;
+	background: #7266BA;
+	display: inline-block;
+	width: 200px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+.publish_finished_descriptionBottom a:hover {
+	background: #625893;
+}
 
 .page-preloader {
   position: fixed;
@@ -4364,6 +4449,9 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	}
 	.infoColumnList{
 		width: 100%;
+	}
+	.publishing_products_loader {
+		top: 15%;
 	}
 }
 
@@ -4577,6 +4665,12 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	.profile_item.-style_general_settings {
 	    height: 95.6%;
 	}
+	.welcome_page_step.-style-stepOne {
+		background-position: 13% 50%;
+	}
+	.main_publishing_products {
+		background-position: 30% 0%;
+	}
 }
 
 @media all and (max-width: 940px){
@@ -4684,6 +4778,9 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	}
 	a.profit_hint {
 		justify-content: center;
+	}
+	.main_publishing_products, .main_publish_finished {
+		height: calc(100vh - 120px);
 	}
 }
 
@@ -4863,6 +4960,9 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	.-style_priceVariantsModal {
 		width: 300px !important;
 	}
+	body:not(.-style_fixed) .content_wrapper.-style-publishPage .mainMenu {
+		overflow: hidden;
+	}
 }
 
 @media all and (max-width: 768px){
@@ -4895,6 +4995,34 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	}
 	.imageColours {
 		padding: 0 30px 0 0;
+	}
+	ul.welcome_page_menu {
+		width: 100%;
+	}
+	.-style-stepThreeDescription {
+		width: 300px;
+		left: calc(50% - 150px);
+	}
+	.-style-stepOneDescription {
+		right: auto;
+		left: calc(50% - 150px);
+	}
+	.welcome_page_nextStep {
+		top: 30px;
+		right: 30px;
+	}
+	.publish_finished_description {
+		width: 300px;
+		right: calc(50% - 150px);
+	}
+	.welcome_page_step.-style-stepOne {
+	    background-position: 22% 50%;
+	}
+	.publish_finished_descriptionTop {
+		padding: 15px 30px;
+	}
+	.step_descriptionTop {
+		padding: 15px 30px;
 	}
 }
 @media all and (max-width: 767px) {
@@ -4977,6 +5105,18 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	}
 	.orders_board_pagination {
 		justify-content: center;
+	}
+	ul.welcome_page_menu li a {
+		line-height: 20px;
+	}
+	span.welcome_menuDescription {
+		display: inline-block;
+		width: 100%;
+		font-size: 13px;
+		margin: 20px 0 0 0;
+	}
+	ul.welcome_page_menu li:not(:first-child) a:after {
+		top: 19px;
 	}
 }
 @media all and (max-width: 600px){
@@ -5098,6 +5238,19 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	}
 	.style-mobileSelectWrapper .dashboard_show {
 		padding: 15px 15px 5px 15px;
+	}
+	.welcome_page_menuWrapper {
+		height: 80px;
+	}
+	span.welcome_menuDescription span {
+		display: inline-block;
+		width: 100%;
+	} 
+	ul.welcome_page_menu li:not(:first-child) a:after {
+	    top: 30px;
+	}
+	.main_publishing_products {
+	    background-position: 40% 0%;
 	}
 }
 
@@ -5226,6 +5379,15 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 		width: 100%;
 		display: inline-block;
 	}
+	.publishing_products_loader {
+		left: calc(50% - 160px);
+	}
+	.welcome_page_step.-style-stepOne {
+	    background-position: 28% 50%;
+	}
+	.welcome_page_step.-style-stepThree {
+	    background-position: 25% 50%;
+	}
 }
 
 @media all and (max-width: 450px){
@@ -5263,5 +5425,23 @@ ul.welcome_page_menu li.-is-active span.welcome_menuDescription {
 	}
 	.change_style_list_buttons {
 		display: none;
+	}
+	span.welcome_menuDescription {
+		font-size: 12px;
+	}
+	ul.welcome_page_menu li:not(:first-child) a:before {
+		top: calc(50% - 10px);
+		left: -10px;
+    	width: 20px;
+    	height: 20px;
+	}
+	ul.welcome_page_menu li:not(:first-child) a:after {
+		font-size: 12px;
+		width: 14px;
+		height: 14px;
+		left: -6px;
+	}
+	.main_publishing_products {
+	    background-position: 46% 0%;
 	}
 }

@@ -1,3 +1,7 @@
+/*Page preloader*/
+$(window).on('load', function () {
+    $(".page-preloader").delay(350).fadeOut('slow');
+});
 $(document).ready(function() {
 	customScrollbar();
 	ordersScrollbar();
@@ -513,16 +517,30 @@ var elements = stripe.elements();
 }
 
 /*Welcome-page steps*/
+function hiddenStepsButton() {
+	if ($('.js-stepsLinks').children().last().hasClass('-is-active')) {
+		$(".js-welcomeNextStep").addClass('-style-nextStepHidden');
+	} else {
+		$(".js-welcomeNextStep").removeClass('-style-nextStepHidden');
+	};
+}
 function welcomePageSteps() {
-	jQuery('body').on('click', '.js-stepsLinks a', function(e){
+	$('body').on('click', '.js-stepsLinks a', function(e){
 	    e.preventDefault();
 		var tabIndex = $(this).parent().index();
-
 		$(this).parent().siblings().removeClass('-is-active');
 		$(this).parent().addClass('-is-active');
-
 		$(this).parents('.main_welcome_page').find('.welcome_page_stepsWrapper').children().eq(tabIndex).siblings().removeClass('-in-active-step');
 		$(this).parents('.main_welcome_page').find('.welcome_page_stepsWrapper').children().eq(tabIndex).addClass('-in-active-step');
+		hiddenStepsButton();
+	});
+	$('body').on('click', '.js-welcomeNextStep', function(e) {
+		e.preventDefault();
+		$('.js-stepsLinks').children('li.-is-active').addClass('js-prev');
+		$('.js-stepsLinks').children('.js-prev').removeClass('-is-active');
+		$('.js-stepsLinks').children('.js-prev').next().find('a').click();
+		$('.js-stepsLinks').children().removeClass('js-prev');
+		hiddenStepsButton();
 	});
 }
 /*END Welcome-page steps*/
