@@ -59,7 +59,7 @@
 	        </div>
          <div class="header_top_bar">
            <div class="dropdown orders_top_dropdown">
-              <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="sprites top_bell"></span><span class="value">2</span></a>
+              <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="top_bell"></span><span class="value">2</span></a>
               <div class="dropdown-menu style_list_notifications style_dropdown" aria-labelledby="dropdownMenu1">
                 <p class="value_notifications">You have 2 notifications</p>
                 <ul class="style_dropdown">
@@ -124,6 +124,12 @@
 					</div>
 					<div class="imageProduct">
 						<div class="productColumn">
+							<div class="square_checkbox_wrapper style_all_models">
+				                <input type="checkbox" checked="checked" name="apply_all_models" id="apply_all_models" class="js-reprintMainCheckbox"/>
+				                <label for="apply_all_models">
+				                  Apply to all models
+				                </label>
+				            </div>
 							<div class="itemImageWrapper">
 								<img src="img/fish.png" alt="">
 								<a href="#" class="itemImageDelete"></a>
@@ -232,7 +238,7 @@
 								<span class="productSize">XL</span>
 							</div>
 						</div>
-						<a href="#" class="itemLink js-tableOfSizes">Table of sizes</a>
+						<a href="#" class="itemLink js-tableOfSizes">TABLE OF SIZES</a>
 					</div>
 				</div>
 			</div>
@@ -279,10 +285,12 @@
 							<li class="infoColumnItem"><span class="blockDescription">Destination</span><span class="blockValue">
 								<div class="product_styles_wrapper">
 									<div class="btn-group dropup -style_simple">
-										<span class="show_styles js-selectedCurrentStyle"></span>
-										<button class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<span class="caret"></span>
-										</button>
+										<a class="show_styles dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<span class="dropdown_walue js-selectedCurrentStyle"></span>
+											<span class="btn">
+												<span class="caret"></span>
+											</span>
+										</a>
 										<ul class="dropdown-menu style_dropdown_style_product js-selectedStyle">
 											<li><a href="#">Fish into fish</a></li>
 											<li><a href="#">Option 2</a></li>

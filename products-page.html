@@ -65,7 +65,7 @@
 	        </div>
          <div class="header_top_bar">
            <div class="dropdown orders_top_dropdown">
-              <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="sprites top_bell"></span><span class="value">2</span></a>
+              <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="top_bell"></span><span class="value">2</span></a>
               <div class="dropdown-menu style_list_notifications style_dropdown" aria-labelledby="dropdownMenu1">
                 <p class="value_notifications">You have 2 notifications</p>
                 <ul class="style_dropdown">
@@ -137,10 +137,12 @@
                   <div class="product_collection_options">
                     <div class="product_styles_wrapper">
                       <div class="btn-group">
-                        <span class="show_styles js-selectedCurrentStyle"></span>
-                        <button class="btn show_days_caret dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <span class="caret"></span>
-                        </button>
+                        <a class="show_styles dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dropdown_walue js-selectedCurrentStyle"></span>
+                          <span class="btn show_days_caret">
+                            <span class="caret"></span>
+                          </span>
+                        </a>
                         <ul class="dropdown-menu style_dropdown_style_product js-selectedStyle">
                           <li><a href="#">Fish into fish</a></li>
                           <li><a href="#">Option 2</a></li>
@@ -540,23 +542,40 @@
 <form action="#">
 
   <div class="modal_fades">
-  <div id="collection_modal" title="Basic dialog">
-    <div class="collection_modal_content">
-      <div class="collection_modal_thumbnail" style="background-image: url('./img/fish.png');"></div>
-      <div class="collection_modal_description">
-        <p>Edit Collection Title</p>
-        <input type="text" placeholder="Fish into fish">
-        <a href="#" class="remove_collection js-removeCollection"><span></span>Remove whole collection</a>
+    <div id="collection_modal" title="Basic dialog">
+      <div class="collection_modal_content">
+        <div class="collection_modal_thumbnail" style="background-image: url('./img/fish.png');">
+          <a href="#" class="js-collectionModalImageBig"></a>
+        </div>
+        <div class="collection_modal_description">
+          <div class="description_top">
+            <p>Edit Collection Title</p>
+            <input type="text" class="js-countLettersField2" placeholder="Fish into fish" maxlength="50">
+            <div class="collection_count_letters_wrap">
+              <span><span class="collection_count_letters js-countLettersValue2">0</span>/50</span>
+            </div>
+            <a href="#" class="remove_collection js-removeCollection"><span></span>Remove whole collection</a>
+          </div>
+          <div class="collection_modal_confirmButtons">
+            <input type="submit" value="CANCEL">
+            <input type="submit" value="SAVE CHANGES" class="-is-active">
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <div id="products_image_modal" title="Basic dialog" class="image_modal">
+      <div class="image_modal_thumbnail" style="background-image: url('./img/fish.png');">
+      </div>
+    </div>
+
+
 
   <div id="confirmation_modal" title="Basic dialog">
   <p>By removing whole collection all products assotiated with it, will also being removed</p>
   <form action="#">
     <div class="confirmation_modal_buttons">
       <input type="submit" value="CANCEL">
-      <input type="submit" value="REMOVE">
+      <input type="submit" value="REMOVE" class="-is-active">
     </div>
   </form>
   </div>

@@ -23,6 +23,7 @@ $(document).ready(function() {
 	mobileMenu();
 	mobileFilters();
 	welcomePageSteps();
+	editProductCheckbox();
 });
 
 // Scrollbar (edit product 2)
@@ -154,6 +155,24 @@ function disableProductItem() {
 	});
 };
 /*END Disable product*/
+
+/*Edit product checkbox*/
+function editProductCheckbox() {
+	var checkbox = $('input.js-editProductCheckbox:checkbox:not(:checked)');
+	if (checkbox.prop('checked')){
+    	checkbox.parents('.imageModelsItem').removeClass('-notCheckedModelsItem');
+	} else {
+	    checkbox.parents('.imageModelsItem').addClass('-notCheckedModelsItem');
+	};
+	$('body').on('click', '.js-editProductCheckbox', function(e) {
+		if ($(e.target).prop('checked') == true) {
+			$(e.target).parents('.imageModelsItem').removeClass('-notCheckedModelsItem');
+		} else {
+			$(e.target).parents('.imageModelsItem').addClass('-notCheckedModelsItem');
+		};
+	});			
+}
+/*END Edit product checkbox*/
 
 /*Reprint order checkboxes select all*/
 function selectCheckboxes() {
@@ -295,6 +314,24 @@ function activationModal() {
 		  $( "#image_modal" ).dialog( "open" );
 		});
 		$( '#image_modal' ).parents('.ui-dialog').addClass( 'collection_modal' );
+		$( '.ui-dialog-titlebar-close' ).html('');
+	};
+
+    if ($( "#collection_modal" ).length) {
+			$( "#products_image_modal" ).dialog({
+	    	autoOpen: false,
+	    	maxWidth: 572,
+	    	modal: true,
+	    	draggable: false,
+	    	resizable: false,
+	    	width: 572,
+	    	height: 478
+	    });
+	    $('body').on('click', '.js-collectionModalImageBig', function(e) {
+	    	e.preventDefault();
+		  $( "#products_image_modal" ).dialog( "open" );
+		});
+		$( '#products_image_modal' ).parents('.ui-dialog').addClass( 'collection_modal' );
 		$( '.ui-dialog-titlebar-close' ).html('');
 	};
 
